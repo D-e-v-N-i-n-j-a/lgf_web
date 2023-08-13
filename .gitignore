@@ -1,0 +1,28 @@
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore database files
+*.db
+*.sqlite3
+
+# Ignore static files (collected static files should be served by a web server)
+/static/
+
+# Ignore media files (user-uploaded content)
+/media/
+
+# Ignore environment-specific files
+.env
+.env.*
+
+# Ignore local settings (modify this if your local settings file is named differently)
+/settings_local.py
+
+# Ignore Python virtual environment
+venv/
