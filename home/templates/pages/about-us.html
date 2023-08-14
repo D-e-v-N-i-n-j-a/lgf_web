@@ -1,0 +1,42 @@
+{% include 'shared/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="container-fluid intro">
+
+</div>
+
+{% include 'component/hero-about.html' %}
+
+{% include 'component/vision-mission-statement.html' %}
+
+{% include 'component/our-team.html' %}
+{% if success_message %}
+<div class="alert alert-success">{{ success_message }}</div>
+{% endif %}
+{% include 'component/contact-us.html' %}
+
+
+{% include 'component/blog-carousel.html' %}
+
+
+{% include 'shared/footer.html' %}
+{% endblock %}
+
+
+
+
+<style>
+    .intro{
+        background-image: url("{% static 'img/Frame.png' %}");
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+
+

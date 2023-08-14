@@ -101,6 +101,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+DEFAULT_FROM_EMAIL = 'your_email@example.com'  # Set your default from email
+CONTACT_EMAIL = 'contact@example.com'  # Set the email where you want to receive contact form submissions
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -120,6 +125,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'home/templates/assets/')]
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 PAYPAL_CLIENT_ID = 'YOUR_PAYPAL_CLIENT_ID'

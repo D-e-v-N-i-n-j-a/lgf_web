@@ -1,0 +1,64 @@
+{% include 'shared/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="bg-light p-4">
+          <h2 class="mb-3">Donate</h2>
+          <p class="text-muted">
+            We believe in the power of collective action and the potential for change when we come together. Your donation is an investment in LGF. Please consider making a contribution today and being a part of this incredible movement.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3 class="bg-success text-center text-white">Donate Form</h3>
+        <form>
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+              <label>Select Amount</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="donationAmount" id="amount10" value="10">
+                <label class="form-check-label" for="amount10">$10</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="donationAmount" id="amount25" value="25">
+                <label class="form-check-label" for="amount25">$25</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="donationAmount" id="amount50" value="50">
+                <label class="form-check-label" for="amount50">$50</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="donationAmount" id="amount100" value="100">
+                <label class="form-check-label" for="amount100">$100</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Leave a message"></textarea>
+            </div>
+            <button type="button" class="btn btn-warning ml-2 my-2">Pay with PayPal</button>
+          </form>
+      </div>
+    </div>
+    <!-- Donate Form -->
+    
+  </div>
+  {% include 'component/blog-carousel.html' %}
+
+  {% include 'shared/footer.html' %}
+
+{% endblock %}
+
+
+
