@@ -32,7 +32,7 @@ class Blog(models.Model):
     
 
 class Projects(models.Model):
-    title = models.TextField(max_length=100)
+    title = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ManyToManyField('Image',blank=True)
     date_started = models.DateField()
@@ -52,15 +52,6 @@ class Image(models.Model):
         return str(self.image)
     
 
-
-class Contact(models.Model):
-    full_name = models.CharField(max_length=200)
-    email = models.EmailField()
-    phone = models.CharField(max_length=100)
-    message = models.TextField()
-     
-    def __str__(self) -> str:
-        return str(self.full_name)
 
 
 

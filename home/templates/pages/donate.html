@@ -3,9 +3,9 @@
 
 
 {% block content %}
-<div class="container mt-5">
+<div class="container my-5">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="bg-light p-4">
           <h2 class="mb-3">Donate</h2>
           <p class="text-muted">
@@ -13,16 +13,17 @@
           </p>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 shadow">
         <h3 class="bg-success text-center text-white">Donate Form</h3>
-        <form>
+        <form method="post">
+            {% csrf_token %}
             <div class="form-group">
               <label for="fullName">Full Name</label>
-              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+              <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
             </div>
             <div class="form-group">
               <label>Select Amount</label>
@@ -44,17 +45,21 @@
               </div>
             </div>
             <div class="form-group">
+                <label for="email">Amount</label>
+                <input type="number" class="form-control" id="number" placeholder="Enter Amount" name="amount">
+              </div>
+            <div class="form-group">
               <label for="message">Message</label>
               <textarea class="form-control" id="message" rows="3" placeholder="Leave a message"></textarea>
             </div>
-            <button type="button" class="btn btn-warning ml-2 my-2">Pay with PayPal</button>
+            <button type="submit" class="btn btn-warning ml-2 my-2" >Pay with PayPal   <a href="#" class="text-black"><i class="fa fa-paypal mx-1"></i></a></button>
           </form>
       </div>
     </div>
     <!-- Donate Form -->
     
   </div>
-  {% include 'component/blog-carousel.html' %}
+  {% comment %} {% include 'component/blog-carousel.html' %} {% endcomment %}
 
   {% include 'shared/footer.html' %}
 

@@ -18,6 +18,9 @@ def home(request):
 
 
 
+
+
+# CONTACT US FORM
 def aboutUs(request):
     if request.method == 'POST':
         full_name = request.POST.get('full_name')
@@ -47,6 +50,7 @@ def aboutUs(request):
 
 
 
+# DONATE FORM
 def donate(request):
     if request.method == 'POST':
         
@@ -100,4 +104,22 @@ def donate(request):
 
     
     return render(request,'pages/donate.html') 
+
+
+
+
+# BLOG HERE
+
+def blogs(request):
+
+    return render(request,'pages/blog.html')
+
+
+
+
+
+
+
+
+
 
