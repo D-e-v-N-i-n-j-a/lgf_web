@@ -1,7 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render,redirect
+from django.shortcuts import get_object_or_404, render,redirect
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import Blog
 import paypalrestsdk
 # Create your views here.
 
@@ -111,10 +112,20 @@ def donate(request):
 # BLOG HERE
 
 def blogs(request):
+    blog = Blog.objects.all()
+    context = {'blogs': blog}
 
-    return render(request,'pages/blog.html')
+    return render(request,'pages/blog.html',context)
 
 
+
+
+
+def blog_details(request,blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
+     
+    
+    return render(request,'pages/blog-details.html',{'blog': blog})
 
 
 

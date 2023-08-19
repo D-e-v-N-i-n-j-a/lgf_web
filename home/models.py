@@ -46,12 +46,6 @@ class Projects(models.Model):
     def __str__(self) -> str:
         return f'{self.title} ~ {self.status}'
 
-
-class Image(models.Model):
-    image = models.ImageField(upload_to='images/')
-    
-    def __str__(self) -> str:
-        return str(self.image)
     
 
 
@@ -67,6 +61,12 @@ class Metrics(models.Model):
     class Meta:
         verbose_name_plural = "Metrics"
 
+
+class Image(models.Model):
+    image = models.ImageField(upload_to='images/')
+    
+    def __str__(self) -> str:
+        return str(self.image)
 
 
 
