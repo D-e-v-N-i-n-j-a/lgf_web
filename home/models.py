@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -24,9 +24,11 @@ class Team(models.Model):
 
 class Blog(models.Model):
     title = models.CharField(max_length=100)
+    summary = models.TextField(max_length=200)
     description = models.TextField()
-    images = models.ManyToManyField('Image', blank=True)
-    
+    images = models.ManyToManyField('Image')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_posted = models.DateTimeField(auto_now_add=True)
     def __str__(self) -> str:
         return f'{self.title}'
     
@@ -51,6 +53,21 @@ class Image(models.Model):
     def __str__(self) -> str:
         return str(self.image)
     
+
+
+class Metrics(models.Model):
+    fund_raised = models.PositiveIntegerField(default=0)
+    completed_projects = models.PositiveIntegerField(default=0)
+    donations = models.PositiveIntegerField(default=0)
+    volunteers = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return "Metrics"
+
+    class Meta:
+        verbose_name_plural = "Metrics"
+
+
 
 
 

@@ -6,37 +6,38 @@
         <div class="col-md-3">
           <h5>Address</h5>
           <ul class="list-unstyled">
-            <li>123 Street, City</li>
-            <li>Country</li>
-            <li>Email: contact@example.com</li>
-            <li>Phone: +123456789</li>
+            <li  class="text-grey text-decoration-none" >123 Street, City</li>
+            <li  class="text-grey text-decoration-none" >Country</li>
+            <li  class="text-grey text-decoration-none" >Email: contact@example.com</li>
+            <li  class="text-grey text-decoration-none" >Phone: +123456789</li>
           </ul>
         </div>
         <!-- About Section -->
         <div class="col-md-3">
           <h5>About</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Our Mission</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Testimonials</a></li>
+            <li><a  class="text-grey text-decoration-none" href="#">Our Mission</a></li>
+            <li><a  class="text-grey text-decoration-none" href="#">Our Team</a></li>
+            <li><a  class="text-grey text-decoration-none" href="#">Testimonials</a></li>
           </ul>
         </div>
         <!-- Our Projects Section -->
         <div class="col-md-3">
-          <h5>Our Projects</h5>
+          <h5 >Our Projects</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-            <li><a href="#">Project 3</a></li>
+            <li><a href="#" class="text-grey text-decoration-none">Project 1</a></li>
+            <li><a href="#" class="text-grey text-decoration-none">Project 2</a></li>
+            <li><a href="#" class="text-grey text-decoration-none">Project 3</a></li>
           </ul>
         </div>
+        
         <!-- Join Us Section -->
         <div class="col-md-3">
           <h5>Join Us</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Become a Volunteer</a></li>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a  class="text-grey text-decoration-none" href="#">Become a Volunteer</a></li>
+            <li><a  class="text-grey text-decoration-none" href="{% url 'home:donate' %}">Donate</a></li>
+            <li><a  class="text-grey text-decoration-none" href="#">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -56,5 +57,12 @@
       </div>
 
 
+
+    <style>
+      .text-grey {
+        color: grey !important;
+        font-size: 12px !important;
+      }
+    </style>
 
 

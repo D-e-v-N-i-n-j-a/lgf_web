@@ -3,10 +3,67 @@
 
 
 {% block content %}
+<div class="container-fluid intro">
+
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="p-4 text-center">
+                <h2 class="mb-3 display-2 fw-bolder">OUR BLOG</h2>
+                <h5 class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ad.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="bg-light p-4">
+                <img src="{% static 'img/frame1.png' %}" alt="Image 1" class="img-fluid mb-3">
+                <h2 class="mb-2 fw-bold post-title">How to Invest In Investing Company</h2>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="text-muted">Date Posted: August 18, 2023</p>
+                    <p class="text-primary">Posted by: John Doe</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit libero vel metus tincidunt.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="bg-light p-4">
+                <img src="{% static 'img/frame1.png' %}" alt="Image 2" class="img-fluid mb-3">
+                <h2 class="mb-2 fw-bold post-title">How to Invest In Investing Company</h2>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="text-muted">Date Posted: August 18, 2023</p>
+                    <p class="text-primary">Posted by: John Doe</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit libero vel metus tincidunt.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+
+{% include 'shared/footer.html' %}
 
 {% endblock %}
+
+<style>
+    .intro{
+        background-image: url("{% static 'img/Frame.png' %}");
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .post-title{
+        color: orangered;
+    }
+</style>
 
 
 

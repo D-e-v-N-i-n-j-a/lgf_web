@@ -1,0 +1,75 @@
+{% load static %}
+
+<div class='overview container-fluid'>
+<div class="overlay">
+    <div class="container my-5">
+        <div class="row justify-content-start">
+            <div class="col-md-12">
+                <h5 class="text-light">Great Reviews for our services</h5>
+                <h1 class="text-light">Technical Statistics</h1>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-3 mb-2">
+                <div class="card text-center">
+                    <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">$30</h5>
+                        <p class="card-text">Fund Raised</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-2">
+                <div class="card text-center">
+                    <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">78</h5>
+                        <p class="card-text">Completed Projects </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-2">
+                <div class="card text-center">
+                    <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">9,200</h5>
+                        <p class="card-text">Donation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-5">
+                <div class="card text-center">
+                    <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">2,750</h5>
+                        <p class="card-text">Volunteer</p>
+                    </div>
+                </div>
+            </div>
+           
+            
+           
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<style>
+    .overview{
+        background-image: url("{% static 'img/Do.png' %}");
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+    .overlay {
+        background-color: rgba(0,0,0,0.5); /* Use your desired RGB color values and adjust the alpha value */
+        height: 100%;
+    }
+</style>
