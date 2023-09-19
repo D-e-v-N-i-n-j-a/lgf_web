@@ -1,9 +1,12 @@
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render,redirect
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Blog
+from .models import Blog,Comment
 import paypalrestsdk
+from .models import ContactFormSubmission,Donation
+from .form import CommentForm
 # Create your views here.
 
 paypalrestsdk.configure({
@@ -23,32 +26,37 @@ def home(request):
 
 # CONTACT US FORM
 def aboutUs(request):
+    success_message = None
+
     if request.method == 'POST':
-        full_name = request.POST.get('full_name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        message = request.POST.get('message')
+        full_name = request.POST['full_name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+
+        # Save user information to the database
+        submission = ContactFormSubmission(
+            full_name=full_name,
+            email=email,
+            phone=phone,
+            message=message,
+        )
+        submission.save()
 
         # Send email
         try:
             send_mail(
-                subject='New Contact Form Submission',
-                message=f'From: {full_name}\nEmail: {email}\n\nMessage:\n{message}',
+                subject='Thank You for Contacting Us',
+                message='Thank you for contacting us. We will get back to you soon!',
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CONTACT_EMAIL],
+                recipient_list=[email],  # Send thank-you email to the user
                 fail_silently=False,
             )
             success_message = "Your message has been sent successfully!"
-            
-            
-        except:
+        except Exception as e:
             success_message = None
-    else:
-        success_message = None
-    
-    return render(request,'pages/about-us.html', {'success_message': success_message})
 
-
+    return render(request, 'pages/about-us.html', {'success_message': success_message})
 
 
 # DONATE FORM
@@ -96,6 +104,14 @@ def donate(request):
         # Create the payment on PayPal
         if payment.create():
             # Redirect the user to PayPal for payment approval
+            donation = Donation(name=name, email=email, amount=total_amount)
+            donation.save()
+            subject = 'Thank You for Your Donation'
+            message = 'Thank you for your generous donation. We appreciate your support!'
+            from_email = settings.DEFAULT_FROM_EMAIL
+            recipient_list = [email]
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            
             for link in payment.links:
                 if link.method == "REDIRECT":
                     return redirect(link.href)
@@ -110,10 +126,16 @@ def donate(request):
 
 
 # BLOG HERE
-
 def blogs(request):
-    blog = Blog.objects.all()
-    context = {'blogs': blog}
+    all_blogs = Blog.objects.all()
+    paginator = Paginator(all_blogs, 4)
+    page_number = request.GET.get('page')
+    blogs = paginator.get_page(page_number)
+    
+    context = {
+        'blogs': blogs,
+    }
+
 
     return render(request,'pages/blog.html',context)
 
@@ -121,11 +143,40 @@ def blogs(request):
 
 
 
-def blog_details(request,blog_id):
+def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-     
+    comments = Comment.objects.filter(blog=blog)  # Retrieve comments for the current blog
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.blog = blog
+            comment.save()
+            return redirect('home:blog-details', blog_id=blog.id)
+
+    else:
+        form = CommentForm() 
+
+    return render(request, 'pages/blog-details.html', {'blog': blog, 'comments': comments, 'form': form})
+
+
+
+
+
+def join(request):
     
-    return render(request,'pages/blog-details.html',{'blog': blog})
+    return render(request,'pages/join-us.html')
+    
+    
+
+
+
+
+
+
+
+
 
 
 

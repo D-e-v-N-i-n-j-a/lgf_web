@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
 # Create your models here.
 
 
@@ -31,6 +33,18 @@ class Blog(models.Model):
     date_posted = models.DateTimeField(auto_now_add=True)
     def __str__(self) -> str:
         return f'{self.title}'
+
+
+class Comment(models.Model):
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments')
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Comment by {self.full_name} on {self.blog.title}'
+
     
 
 class Projects(models.Model):
@@ -68,6 +82,25 @@ class Image(models.Model):
     def __str__(self) -> str:
         return str(self.image)
 
+
+
+class ContactFormSubmission(models.Model):
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
+
+
+
+class Donation(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    donation_date = models.DateTimeField(auto_now_add=True)
 
 
 

@@ -10,7 +10,8 @@
 
     <!-- Logo -->
     <a class="navbar-brand" href="/">
-      <img src="circular-logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top rounded-circle">
+      <img src="{% static 'img/logo.png' %}" alt="Learners Girls Foundation" width="40" height="40" class="d-inline-block align-top rounded-circle">
+      <span class="d-none d-sm-inline-block ml-2">Learners Girls Foundation</span>
     </a>
 
     <!-- Menu Items -->
@@ -22,24 +23,30 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'home:about' %}">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a class="dropdown-item" href="#">Project 1</a>
+            <a class="dropdown-item" href="#">Project 2</a>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Join Us</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="joinUsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Join Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="joinUsDropdown">
+            <a class="dropdown-item" href="{% url 'home:join' %}">Become a Volunteer</a>
+            <a class="dropdown-item" href="#">Join Our Community</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'home:blog' %}">Blog</a>
         </li>
       </ul>
-      <!-- Donate Button (Visible on Small Devices) -->
       <a class="btn btn-outline-warning my-2 my-lg-0 d-block d-lg-none fw-bold" type="button" href="{% url 'home:donate' %}">Donate</a>
     </div>
-
-    <!-- Donate Button (Visible on Medium and Large Devices) -->
     <a class="btn btn-outline-warning my-2 my-lg-0 d-none d-lg-block fw-bold" type="button" href="{% url 'home:donate' %}">Donate</a>
   </div>
 </nav>
-  
-</style>
-

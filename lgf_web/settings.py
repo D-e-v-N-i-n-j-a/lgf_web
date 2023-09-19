@@ -100,10 +100,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
-DEFAULT_FROM_EMAIL = 'your_email@example.com'  # Set your default from email
-CONTACT_EMAIL = 'contact@example.com'  # Set the email where you want to receive contact form submissions
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'your-smtp-host'
+EMAIL_PORT = 548
+EMAIL_USE_TLS = True  # Use SSL/TLS for secure connection
+EMAIL_HOST_USER = 'your-smtp-username'
+EMAIL_HOST_PASSWORD = 'lilnastic205'
+CONTACT_EMAIL = 'your-contact-email'
+DEFAULT_FROM_EMAIL = 'skyhightech93@example.com'  # Set your default from email
+CONTACT_EMAIL = 'skyhightech93@@gmail.com'  # Set the email where you want to receive contact form submissions
 
 
 # Internationalization

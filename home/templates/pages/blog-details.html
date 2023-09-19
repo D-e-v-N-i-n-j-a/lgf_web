@@ -3,8 +3,63 @@
 
 {% block content %}
 
+<div class="container">
+    <span>{{ blog.description }}</span>
+
+    <!-- DISPLAY COMMENTS -->
+    <div class="mt-5">
+        <h6 class="fw-bold my-3">Comments</h6>
+        <div class="mb-5">
+            {% for comment in blog.comments.all %}
+            <div class="media mb-4">
+                <img src="{% static 'img/user.png' %}" alt="User Avatar" class="rounded-circle mr-3" width="64" height="64">
+                <div class="media-body">
+                    <h5 class="mt-0"><strong>{{ comment.full_name }}</strong> - {{ comment.timestamp }}</h5>
+                    <p>{{ comment.message }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p>No comments yet.</p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <!-- Comment Form -->
+    <div class="text-center mt-5">
+        <h3 class="fw-bold">Leave a comment</h3>
+        <p class="text-muted">We would love to hear from you.</p>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="row">
+                <!-- Full Name (Col-md-6) -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="full_name" name="full_name"
+                            placeholder="Your Full Name">
+                    </div>
+                </div>
+
+                <!-- Email (Col-md-6) -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message (Col-md-12) -->
+            <div class="form-group my-5">
+                <textarea class="form-control" id="message" name="message" rows="4"
+                    placeholder="Your Comment"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary mt-3">Submit Comment</button>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
-
-
-
-
