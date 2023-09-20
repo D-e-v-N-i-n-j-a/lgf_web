@@ -105,6 +105,20 @@ class Donation(models.Model):
 
 
 
+class PartnershipForm(models.Model):
+    email = models.EmailField(max_length=255, verbose_name='Email')
+    firstname = models.CharField(max_length=255, verbose_name='First Name')
+    lastname = models.CharField(max_length=255, verbose_name='Last Name')
+    organizations = models.CharField(max_length=255, verbose_name='Organizations')
+    contact_number = models.CharField(max_length=20, verbose_name='Contact Number')
+    country = models.CharField(max_length=255, verbose_name='Country')
+    area_of_interest = models.CharField(max_length=255, verbose_name='Area of Interest')
+    summary_of_proposed_partnership = models.TextField(verbose_name='Summary of Proposed Partnership', max_length=800)
+    start_date = models.DateField(verbose_name='Start Date')
+    finish_date = models.DateField(verbose_name='Finish Date')
+    partnership_duration = models.CharField(max_length=255, verbose_name='Partnership Duration')
+    sponsorship_amount = models.CharField(max_length=255, verbose_name='Sponsorship Amount')
+
 
 
 

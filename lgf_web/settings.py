@@ -100,15 +100,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+
+
+# CLIENT_ID
+# PAYPAL_CLIENT_ID = ''
+# PAYPAL_CLIENT_SECRET = ' ENzZCSYuNqCIsG_zL345ptSl6yIMzVchqTKWuhCarOa3wIqm4-MFk5TJauiqzvxDXUVZ9j6n14K_xHV6'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'your-smtp-host'
-EMAIL_PORT = 548
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True  # Use SSL/TLS for secure connection
-EMAIL_HOST_USER = 'your-smtp-username'
-EMAIL_HOST_PASSWORD = 'lilnastic205'
-CONTACT_EMAIL = 'your-contact-email'
-DEFAULT_FROM_EMAIL = 'skyhightech93@example.com'  # Set your default from email
-CONTACT_EMAIL = 'skyhightech93@@gmail.com'  # Set the email where you want to receive contact form submissions
+EMAIL_HOST_USER = 'lgf.ghana@gmail.com'
+EMAIL_HOST_PASSWORD = 'xhhctwrbpnlhnsko '
 
 
 # Internationalization
@@ -133,8 +137,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-PAYPAL_CLIENT_ID = 'YOUR_PAYPAL_CLIENT_ID'
-PAYPAL_CLIENT_SECRET = 'YOUR_PAYPAL_CLIENT_SECRET'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import home,aboutUs,donate,blogs,blog_details,join
-
+from .views.home_view import home
+from .views.about_views import aboutUs
+from .views.donate_views import donate
+from .views.blog_views import blog_details,blogs
+from .views.partner_views import partnerForm,partnership
 
 
 
@@ -10,8 +13,10 @@ urlpatterns = [
     path('about',aboutUs,name='about'),
     path('donate',donate,name='donate'),
     path('blog',blogs,name='blog'),
-    path('join',join,name='join'),
+    path('partnership',partnership,name='partnership'),
+    path('partnerForm',partnerForm,name='partnerForm'),
     path('blog/<int:blog_id>/', blog_details, name='blog-details'),
+    
     
 ]
 

@@ -6,13 +6,25 @@
 <div class="container">
     <span>{{ blog.description }}</span>
 
+    <!-- HORIZONTAL LINE -->
+    <div class="social-icons d-flex align-items-center justify-content-center my-5">
+    <hr class="border  border-1 opacity-50 w-100">
+
+        <a href="#" class="text-dark"><i class="fa fa-facebook-f fa-1x mx-3"></i></a>
+        <a href="#" class="text-dark"><i class="fa fa-instagram fa-1x mx-3"></i></a>
+        <a href="#" class="text-dark"><i class="fa fa-twitter fa-1x mx-3"></i></a>
+        <hr class="border border-1 opacity-50 w-100">
+
+    </div>
+
     <!-- DISPLAY COMMENTS -->
     <div class="mt-5">
         <h6 class="fw-bold my-3">Comments</h6>
         <div class="mb-5">
             {% for comment in blog.comments.all %}
             <div class="media mb-4">
-                <img src="{% static 'img/user.png' %}" alt="User Avatar" class="rounded-circle mr-3" width="64" height="64">
+                <img src="{% static 'img/user.png' %}" alt="User Avatar" class="rounded-circle mr-3" width="64"
+                    height="64">
                 <div class="media-body">
                     <h5 class="mt-0"><strong>{{ comment.full_name }}</strong> - {{ comment.timestamp }}</h5>
                     <p>{{ comment.message }}</p>
@@ -26,7 +38,7 @@
     </div>
 
     <!-- Comment Form -->
-    <div class="text-center mt-5">
+    <div class="text-center my-5 mx-auto">
         <h3 class="fw-bold">Leave a comment</h3>
         <p class="text-muted">We would love to hear from you.</p>
 
@@ -35,7 +47,7 @@
 
             <div class="row">
                 <!-- Full Name (Col-md-6) -->
-                <div class="col-md-4">
+                <div class="col-md-4 p-2">
                     <div class="form-group">
                         <input type="text" class="form-control" id="full_name" name="full_name"
                             placeholder="Your Full Name">
@@ -43,7 +55,7 @@
                 </div>
 
                 <!-- Email (Col-md-6) -->
-                <div class="col-md-4">
+                <div class="col-md-4 p-2">
                     <div class="form-group">
                         <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
                     </div>
@@ -57,9 +69,10 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary mt-3">Submit Comment</button>
+            <button type="submit" class="btn btn-success mt-3">Submit Comment</button>
         </form>
     </div>
 </div>
+{% include 'shared/footer.html' %}
 
 {% endblock %}

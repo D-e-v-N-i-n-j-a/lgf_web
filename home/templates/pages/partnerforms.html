@@ -1,0 +1,178 @@
+{% include 'shared/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container my-5">
+    {% if success_message %}
+        <div class="container my-5">
+            <div class="alert alert-success">
+                {{ success_message }}
+            </div>
+        </div>
+        {% endif %}
+    <h3 class="fw-bold">
+        Partnership forms
+    </h3>
+    <div class="mt-5  col">
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold">Email <span
+                        class="text-danger">*</span></label>
+                <input required type="email" name ="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Email">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <!-- First Name Field -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <!-- Last Name Field -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+            <div class="my-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold">organizations <span
+                        class="text-danger">*</span></label>
+                <input required type="text" name="organizations" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="organizations">
+            </div>
+            <div class="my-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold">Contact number <span
+                        class="text-danger">*</span></label>
+                <input required type="text" name="contact_number" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Contact number">
+            </div>
+            <!-- COUNTRY -->
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label fw-bold">Country <span
+                        class="text-danger">*</span></label>
+                <input required type="text" name="country" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Country">
+            </div>
+            <div class="form-group my-3">
+                <label for="areaOfInterest" class="form-label fw-bold">What area are you most interested in <span
+                        class="text-danger">*</span></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="areaOfInterest" id="charityYear"
+                        value="Charity of the Year partnership">
+                    <label class="form-check-label" for="charityYear">
+                        Charity of the Year partnership
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="areaOfInterest" id="supportProject"
+                        value="Support a Project">
+                    <label class="form-check-label" for="supportProject">
+                        Support a Project
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="areaOfInterest" id="inKindDonations"
+                        value="In-kind donations">
+                    <label class="form-check-label" for="inKindDonations">
+                        In-kind donations
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="areaOfInterest" id="causeMarketing"
+                        value="Cause-related marketing">
+                    <label class="form-check-label" for="causeMarketing">
+                        Cause-related marketing
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="areaOfInterest" id="staffFundraising"
+                        value="Staff fundraising">
+                    <label class="form-check-label" for="staffFundraising">
+                        Staff fundraising
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="areaOfInterest" id="otherInterest" value="Other">
+                    <label class="form-check-label" for="otherInterest">
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <!-- Summary of the proposed partnership -->
+            <div class="form-group">
+                <label for="summaryInput" class="form-label fw-bold">Summary of the proposed partnership <span
+                        class="text-danger">*</span></label>
+                <textarea class="form-control" id="summaryTextarea" name="summary_of_proposed_partnership" rows="4" maxlength="800"
+                    placeholder="Enter your summary message" style="background-color: #e0e0e0;"></textarea>
+                <small class="form-text text-muted">Maximum 200 words (800 characters) allowed.</small>
+
+            </div>
+            <div class="form-group my-3">
+                <label for="summaryInput" class="form-label fw-bold">Partnership duration <span
+                        class="text-danger">*</span></label>
+                <div class="container mt-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="startDate">Start Date</label>
+                                <input type="date" class="form-control" id="startDate" name="start_date"
+                                    placeholder="Start Date">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="finishDate">Finish Date</label>
+                                <input type="date" class="form-control" id="finishDate" name="finish_date"
+                                    placeholder="Finish Date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="form-group my-3">
+            <label for="fundraisingAmount" class="form-label fw-bold">How much money do you expect to fundraise (In dollars)?
+                <span class="text-danger">*</span></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="fundraisingAmount" id="amount100" value="100">
+                <label class="form-check-label" for="amount100">
+                    100
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="fundraisingAmount" id="amount100-500" value="100-500">
+                <label class="form-check-label" for="amount100-500">
+                    100-500
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="fundraisingAmount" id="amount500-1000" value="500-1000">
+                <label class="form-check-label" for="amount500-1000">
+                    500-1000
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="fundraisingAmount" id="amount1000-3000" value="1000-3000">
+                <label class="form-check-label" for="amount1000-3000">
+                    1000-3000
+                </label>
+            </div>
+        </div>
+
+            <button type="submit" class="btn btn-success text-white fw-bold">Submit</button>
+
+        </form>
+        
+
+    </div>
+</div>
+{% include 'shared/footer.html' %}
+
+{% endblock %}
