@@ -122,7 +122,32 @@ class PartnershipForm(models.Model):
 
 
 
+class Fundraiser(models.Model):
+    email = models.EmailField(max_length=255)
+    firstname = models.CharField(max_length=255, blank=True)
+    lastname = models.CharField(max_length=255, blank=True)
+    country = models.CharField(max_length=255)
+    area_of_interest = models.CharField(max_length=255, choices=[
+        ('Charity of the Year partnership', 'Charity of the Year partnership'),
+        ('Support a Project', 'Support a Project'),
+        ('In-kind donations', 'In-kind donations'),
+        ('Raise funds in memory of a loved one', 'Raise funds in memory of a loved one'),
+        ('Cause-related marketing', 'Cause-related marketing'),
+        ('Raise funds to celebrate a special occasion', 'Raise funds to celebrate a special occasion'),
+    ])
+    summary_of_proposed_partnership = models.TextField(max_length=800)
+    start_date = models.DateField(null=True, blank=True)
+    finish_date = models.DateField(null=True, blank=True)
+    fundraising_amount = models.CharField(max_length=255, choices=[
+        ('100', '100'),
+        ('100-500', '100-500'),
+        ('500-1000', '500-1000'),
+        ('1000-3000', '1000-3000'),
+    ])
+    submission_timestamp = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.email  # You can change this to represent the model as you prefer
 
 
 
