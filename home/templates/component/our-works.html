@@ -4,53 +4,26 @@
     <div class="row">
         <div class="col-md-12">
             <div class="text-center">
-                <h5 class="font-weight-bold">Our Work</h5>
+                <h5 class="fw-bold">Our Work</h5>
                 <p class="text-muted">The main focus of Learners Girls Foundation</p>
             </div>
         </div>
     </div>
 
-    <div class="row my-5 ">
+    <div class="row my-1 ">
         <!-- First Column -->
+        <!-- Loop through the OurWork objects and display them -->
+        {% for work in works %}
         <div class="col-md-6 my-2">
-            <h4>Capacity building</h4>
-            <p><span class="text-muted">
-                Within our community, a pressing concern emerges as a result of limited access to education for children. This challenge is rooted in barriers such as inadequate infrastructure, lack of qualified teachers, and limited learning resources.
-            </span></p>
-            <img src="{% static 'img/frame1.png' %}" alt="Image 1" class="d-block mt-3 custom-image">
-
+            <h4>{{ work.title }}</h4>
+            <p><span class="text-muted">{{ work.description }}</span></p>
+            <img src="{{ work.image.url }}" alt="{{ work.title }}" class="d-block mt-3 custom-image">
             <a href="#" class="btn btn-warning text-white my-2">Read More</a>
         </div>
+        {% endfor %}
 
-        <!-- Second Column -->
-        <div class="col-md-6 my-2">
-            <h4>E-learning and digital skill</h4>
-            <p><span class="text-muted">
-                Within our community, a pressing concern emerges as a result of limited access to education for children. This challenge is rooted in barriers such as inadequate infrastructure, lack of qualified teachers, and limited learning resources.
-            </span></p>
-            <img src="{% static 'img/frame2.png' %}" alt="Image 2" class="d-block mt-3 custom-image">
-            <a href="#" class="btn btn-warning text-white my-2">Read More</a>
-        </div>
 
-         <!-- Second Column -->
-         <div class="col-md-6 my-2">
-            <h4>E-learning and digital skill</h4>
-            <p><span class="text-muted">
-                Within our community, a pressing concern emerges as a result of limited access to education for children. This challenge is rooted in barriers such as inadequate infrastructure, lack of qualified teachers, and limited learning resources.
-            </span></p>
-            <img src="{% static 'img/frame2.png' %}" alt="Image 2" class="d-block mt-3 custom-image">
-            <a href="#" class="btn btn-warning text-white my-2">Read More</a>
-        </div>
-
-         <!-- Second Column -->
-         <div class="col-md-6 my-2">
-            <h4>E-learning and digital skill</h4>
-            <p><span class="text-muted">
-                Within our community, a pressing concern emerges as a result of limited access to education for children. This challenge is rooted in barriers such as inadequate infrastructure, lack of qualified teachers, and limited learning resources.
-            </span></p>
-            <img src="{% static 'img/frame2.png' %}" alt="Image 2" class="d-block mt-3 custom-image">
-            <a href="#" class="btn btn-warning text-white my-2">Read More</a>
-        </div>
+      
     </div>
 
 </div>

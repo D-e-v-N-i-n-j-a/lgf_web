@@ -18,9 +18,7 @@ def donate(request):
         email = request.POST.get('email')
         amount = request.POST.get('donationAmount')
         custom_amount = request.POST.get('customAmount')
-
-        print(f"Name: {name}")
-        print(f"Email: {email}")
+        message_ = request.POST.get('message')
 
         if amount:
             print(f"Amount: {amount}")
@@ -56,14 +54,40 @@ def donate(request):
         if payment.create():
             donation = Donation(name=name, email=email, amount=total_amount)
             donation.save()
+            message = f"A donation has been made through the website"
+            message = f"Full Name: {name}\n"
+            message += f"Email: {email}\n"
+            message += f"Amount: {total_amount}\n"
+            message += f"Message: {message_}\n"
+            send_mail(
+                subject = 'Donation Made',
+                message = message,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list = ['Learnersgirlsfoundation@gmail.com'],
+                fail_silently=False,
+            )
     
             send_mail(
                 subject = 'Thank You for Your Donation',
-                message = 'Thank you for your generous donation. We appreciate your support!',
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list = [email],
                 fail_silently=False,
-                )
+                        message = f'''
+Dear {name},
+
+Thank you for your generous donation to Leaner's Girls Foundation. Your support is greatly appreciated and makes a significant difference in our mission.
+
+Your contribution will help us [mention how the donation will be used, e.g., support a specific cause, project, or program]. We are truly grateful for your generosity and commitment to our cause.
+
+We value your support and look forward to keeping you updated on how your donation is making an impact. If you have any questions or would like to learn more about our work, please feel free to contact us.
+
+Once again, thank you for your kindness and support. Together, we can make a positive change in the lives of those we serve.
+
+Sincerely,
+Founder : Kumuriwor Alira Bushiratu
+ Leaner's Girls Foundation
+'''
+            )
             
             for link in payment.links:
                 if link.method == "REDIRECT":

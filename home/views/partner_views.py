@@ -61,18 +61,16 @@ def partnerForm(request):
             subject = 'Thank You for Your Partnership Inquiry',
            message = f'''Dear {firstname} {lastname},
 
-I wanted to take a moment to express our heartfelt gratitude for your incredible efforts in organizing and leading the recent fundraising campaign for {organizations}. Your dedication and hard work have made a significant impact, and we are truly thankful for your generosity and commitment to our cause.
+Thank you for your interest in fundraising for our cause. We appreciate your submission and dedication to making a positive impact.
 
-Your passion and enthusiasm have not only inspired those around you but have also brought us closer to our fundraising goals. Thanks to your tireless efforts, we have been able to [mention specific achievements or milestones reached].
+We have received your fundraising proposal and will review it shortly. Our team will be in touch with you to discuss the details and next steps. If you have any immediate questions or concerns, please feel free to contact us.
 
-We believe that it's people like you who make a real difference in the world. Your willingness to give your time, energy, and resources to support our cause is remarkable, and we are fortunate to have you as a part of our community.
+Once again, thank you for your commitment to our cause. Together, we can make a difference.
 
-Please accept our deepest thanks and know that your contributions are making a positive change in the lives of those we serve. We look forward to continuing this journey together and achieving even greater successes in the future.
-
-Once again, thank you for your outstanding dedication to our cause. Your commitment to making the world a better place is truly inspiring.
-
-With gratitude,
-Learner's Girls Foundation''',
+Sincerely,
+Your Organization Name
+Founder : Kumuriwor Alira Bushiratu
+''',
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[email],  # Send confirmation email to the user
             fail_silently=False,

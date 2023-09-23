@@ -2,13 +2,14 @@ from django.shortcuts import  render
 from django.core.mail import send_mail
 from django.conf import settings
 
-from home.models import ContactFormSubmission
+from home.models import ContactFormSubmission,Team
 
 
 
 # CONTACT US FORM
 def aboutUs(request):
     success_message = None
+    teams = Team.objects.all()
 
     if request.method == 'POST':
         full_name = request.POST['full_name']
@@ -16,7 +17,6 @@ def aboutUs(request):
         phone = request.POST['phone']
         message = request.POST['message']
 
-        # Save user information to the database
         submission = ContactFormSubmission(
             full_name=full_name,
             email=email,
@@ -38,7 +38,7 @@ def aboutUs(request):
         except Exception as e:
             success_message = None
 
-    return render(request, 'pages/about-us.html', {'success_message': success_message})
+    return render(request, 'pages/about-us.html', {'success_message': success_message,'teams': teams})
 
 
 

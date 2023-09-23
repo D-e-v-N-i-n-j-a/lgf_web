@@ -14,6 +14,7 @@
 {% include 'component/vision-mission-statement.html' %}
 
 {% include 'component/our-team.html' %}
+{% include 'component/board_members.html' %}
 {% if success_message %}
 <div class="alert alert-success">{{ success_message }}</div>
 {% endif %}
@@ -61,11 +62,12 @@
 
 <style>
     .intro{
-        background-image: url("{% static 'img/Frame.png' %}");
-        height: 40vh;
+        background-image: url("{% static 'img/LGF-125.jpg' %}");
+        height: 60vh;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 </style>
 

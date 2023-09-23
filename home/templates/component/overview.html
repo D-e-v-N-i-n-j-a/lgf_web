@@ -14,7 +14,7 @@
                 <div class="card text-center">
                     <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
                     <div class="card-body">
-                        <h5 class="card-title text-warning fw-bold">$30</h5>
+                        <h5 class="card-title text-warning fw-bold">${{ statistics.fund_raised }}</h5>
                         <p class="card-text">Fund Raised</p>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                 <div class="card text-center">
                     <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
                     <div class="card-body">
-                        <h5 class="card-title text-warning fw-bold">78</h5>
+                        <h5 class="card-title text-warning fw-bold">{{ statistics.completed_projects }}</h5>
                         <p class="card-text">Completed Projects </p>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="card text-center">
                     <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
                     <div class="card-body">
-                        <h5 class="card-title text-warning fw-bold">9,200</h5>
+                        <h5 class="card-title text-warning fw-bold">{{ statistics.donations }}</h5>
                         <p class="card-text">Donation</p>
                     </div>
                 </div>
@@ -44,14 +44,11 @@
                 <div class="card text-center">
                     <img src="{% static 'img/icon_2.png' %}" class="card-img-top img-fluid mx-auto" alt="Image 1" style="height: 100px; width:100px">
                     <div class="card-body">
-                        <h5 class="card-title text-warning fw-bold">2,750</h5>
+                        <h5 class="card-title text-warning fw-bold">{{ statistics.volunteers }}</h5>
                         <p class="card-text">Volunteer</p>
                     </div>
                 </div>
             </div>
-           
-            
-           
         </div>
     </div>
 </div>
@@ -61,11 +58,12 @@
 
 <style>
     .overview{
-        background-image: url("{% static 'img/Do.png' %}");
+        background-image: url("{% static 'img/frame2.png' %}");
         
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-size: cover;
         
     }
     .overlay {

@@ -26,7 +26,7 @@
                 <img src="{% static 'img/user.png' %}" alt="User Avatar" class="rounded-circle mr-3" width="64"
                     height="64">
                 <div class="media-body">
-                    <h5 class="mt-0"><strong>{{ comment.full_name }}</strong> - {{ comment.timestamp }}</h5>
+                    <h5 class="mt-0"><strong>{{ comment.full_name }}</strong> - <span class="text-sm">{{ comment.timestamp }}</span></h5>
                     <p>{{ comment.message }}</p>
                 </div>
             </div>

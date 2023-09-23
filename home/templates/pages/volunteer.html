@@ -1,0 +1,101 @@
+{% include 'shared/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container-fluid bg d-flex justify-content-center">
+    <h1 class="text-white fs-2 fw-bold text-center ">Volunteer</h1>
+</div>
+
+<div class="container text-center my-5">
+    <h3 class="fw-bold my-5">Become a fundraiser</h3>
+    <span class="my-5 text-justify">
+        Partnering with the Learners Girls Foundation, an NGO dedicated to girl child education, can bring numerous benefits and
+        make a significant impact. Here are compelling reasons for organizations or individuals to consider partnering with your
+        foundation:
+    </span>
+</div>
+
+
+
+<div class="container my-5">
+    {% if success_message %}
+        <div class="container my-5">
+            <div class="alert alert-success">
+                {{ success_message }}
+            </div>
+        </div>
+        {% endif %}
+    <h3 class="fw-bold">
+        Partnership forms
+    </h3>
+    <div class="mt-5  col">
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold">Email <span
+                        class="text-danger">*</span></label>
+                <input required type="email" name ="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Email">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <!-- First Name Field -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <!-- Last Name Field -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+          
+            <div class="my-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold">Contact number <span
+                        class="text-danger">*</span></label>
+                <input required type="text" name="contact_number" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Contact number">
+            </div>
+            <!-- COUNTRY -->
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label fw-bold">Country <span
+                        class="text-danger">*</span></label>
+                <input required type="text" name="country" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Country">
+            </div>
+         
+
+            <!-- Summary of the proposed partnership -->
+            <div class="form-group my-3">
+                <label for="summaryInput" class="form-label fw-bold">Why do you like be volunteert *<span
+                        class="text-danger">*</span></label>
+                <textarea class="form-control" id="summaryTextarea" name="summary_of_proposed_partnership" rows="4" maxlength="800"
+                    placeholder="Enter your summary message" style="background-color: #e0e0e0;"></textarea>
+                <small class="form-text text-muted">Maximum 200 words (800 characters) allowed.</small>
+
+            </div>
+           
+
+            <button type="submit" class="btn btn-success text-white fw-bold">Submit</button>
+
+        </form>
+        
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+<style>
+    .bg{
+        background-image: url("{% static 'img/Do.png' %}");
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

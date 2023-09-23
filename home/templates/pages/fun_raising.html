@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<div class="container-fluid bg d-flex justify-content-center">
+<div class="container-fluid bg d-flex justify-content-center align-items-end">
     <h1 class="text-white fs-2 fw-bold text-center ">Fun Raising</h1>
 </div>
 <div class="container text-center my-5">
@@ -98,7 +98,7 @@ We are here to guide you every step of the way with ideas, advice and resources 
                 <label for="summaryInput" class="form-label fw-bold">Summary of the proposed partnership <span
                         class="text-danger">*</span></label>
                 <textarea class="form-control" id="summaryTextarea" name="summary_of_proposed_partnership" rows="4" maxlength="800"
-                    placeholder="Enter your summary message" style="background-color: #e0e0e0;"></textarea>
+                    placeholder="Enter your summary message" style="background-color: #F1F1F1;"></textarea>
                 <small class="form-text text-muted">Maximum 200 words (800 characters) allowed.</small>
 
             </div>
@@ -166,10 +166,11 @@ We are here to guide you every step of the way with ideas, advice and resources 
 
 <style>
     .bg{
-        background-image: url("{% static 'img/Do.png' %}");
+        background-image: url("{% static 'img/LGF-155.JPG' %}");
         height: 60vh;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 </style>
 
