@@ -30,6 +30,7 @@ def blogs(request):
 
 
 
+
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     comments = Comment.objects.filter(blog=blog)
