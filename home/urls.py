@@ -15,17 +15,17 @@ from .views.book_talk_views import bookTalk
 app_name = 'home'
 urlpatterns = [
     path('',home,name='home'),
-    path('work/<int:id>/', home_details, name='work_details'),
-    path('about',aboutUs,name='about'),
-    path('donate',donate,name='donate'),
-    path('blog',blogs,name='blog'),
-    path('partnership',partnership,name='partnership'),
-    path('partnerForm',partnerForm,name='partnerForm'),
-    path('blog/<int:blog_id>/', blog_details, name='blog-details'),
-    path('volunteer',volunteer,name="volunteer"),
-    path('funRaising',funRaising,name='fun_raising'),
-    path('community_library',community_library,name='community_library'),
-    path('book_talk',bookTalk,name='book_talk')
+    # path('work/<int:id>/', home_details, name='work_details'),
+    # path('about',aboutUs,name='about'),
+    # path('donate',donate,name='donate'),
+    # path('blog',blogs,name='blog'),
+    # path('partnership',partnership,name='partnership'),
+    # path('partnerForm',partnerForm,name='partnerForm'),
+    # path('blog/<int:blog_id>/', blog_details, name='blog-details'),
+    # path('volunteer',volunteer,name="volunteer"),
+    # path('funRaising',funRaising,name='fun_raising'),
+    # path('community_library',community_library,name='community_library'),
+    # path('book_talk',bookTalk,name='book_talk')
 ]
 
  
