@@ -58,6 +58,6 @@ def blog_details(request, blog_id):
     else:
         form = CommentForm() 
 
-    return render(request, 'pages/blog-details.html', {'blog': blog, 'comments': comments, 'form': form})
+    return render(request, 'pages/single.html', {'blog': blog, 'comments': comments, 'form': form})
 
 

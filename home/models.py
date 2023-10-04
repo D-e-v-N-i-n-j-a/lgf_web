@@ -42,20 +42,39 @@ class OurWork(models.Model):
     def __str__(self):
         return self.title
 
+class Testimonial(models.Model):
+    person_name = models.CharField(max_length=100)
+    profession = models.CharField(max_length=100)
+    testimonial_text = models.TextField()
+    testimonial_image = models.ImageField(upload_to='testimonial_images')  # Add this field
 
+    def __str__(self):
+        return self.person_name
+
+
+class Cause(models.Model):
+    image = models.ImageField(upload_to='causes_images')
+    progress_percentage = models.PositiveIntegerField()
+    raised_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    goal_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
 
 
 class Blog(models.Model):
     title = models.CharField(max_length=100)
     summary = models.TextField(max_length=200)
     description = models.TextField()
-    images = models.ManyToManyField('Image')
+    images = models.ImageField(upload_to='blog_image')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     date_posted = models.DateTimeField(auto_now_add=True)
     def __str__(self) -> str:
         return f'{self.title}'
 
-
+   
 class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments')
     full_name = models.CharField(max_length=100)

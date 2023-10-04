@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog,Team,Projects,Metrics,LibraryPictures,BoardMembers,OurWork
+from .models import Blog,Team,Projects,Metrics,LibraryPictures,BoardMembers,OurWork,Testimonial,Cause
 # Register your models here.
 
 
@@ -21,3 +21,7 @@ admin.site.register(Projects,ProjectAdmin)
 admin.site.register(Metrics)
 admin.site.register(LibraryPictures),
 admin.site.register(OurWork)
+admin.site.register(Testimonial)
+admin.site.register(Cause)
+
+

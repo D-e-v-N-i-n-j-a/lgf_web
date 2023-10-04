@@ -38,7 +38,7 @@ def aboutUs(request):
         except Exception as e:
             success_message = None
 
-    return render(request, 'pages/about-us.html', {'success_message': success_message,'teams': teams})
+    return render(request, 'pages/about.html', {'success_message': success_message,'teams': teams})
 
 
 

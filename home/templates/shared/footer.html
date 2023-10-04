@@ -1,70 +1,55 @@
 {% load static %}
-<div class="container-fluid bg-black text-white py-5">
-  <div class="container-fluid">
-    <div class="row my-5">
-      <!-- Address Section -->
-      <div class="col-md-3">
-        <h5>Address</h5>
-        <ul class="list-unstyled">
-          <li class="text-grey text-decoration-none">123 Street, City</li>
-          <li class="text-grey text-decoration-none">Country</li>
-          <li class="text-grey text-decoration-none">Email: contact@example.com</li>
-          <li class="text-grey text-decoration-none">Phone: +123456789</li>
-        </ul>
-      </div>
-      <!-- About Section -->
-      <div class="col-md-3">
-        <h5>About</h5>
-        <ul class="list-unstyled">
-          <li><a class="text-grey text-decoration-none" href="#">Our Mission</a></li>
-          <li><a class="text-grey text-decoration-none" href="#">Our Team</a></li>
-          <li><a class="text-grey text-decoration-none" href="#">Testimonials</a></li>
-        </ul>
-      </div>
-      <!-- Our Projects Section -->
-      <div class="col-md-3">
-        <h5>Our Projects</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-grey text-decoration-none">Library</a></li>
-          <li><a href="#" class="text-grey text-decoration-none">Book Talk</a></li>
-          <li><a href="#" class="text-grey text-decoration-none">Digital Inclusive program</a></li>
-        </ul>
-      </div>
-
-      <!-- Join Us Section -->
-      <div class="col-md-3">
-        <h5>Join Us</h5>
-        <ul class="list-unstyled">
-          <li><a class="text-grey text-decoration-none" href="#">Partnership</a></li>
-          <li><a class="text-grey text-decoration-none" href="#">Fundraise</a></li>
-          <li><a class="text-grey text-decoration-none" href="{% url 'home:donate' %}">Donation</a></li>
-          <li><a class="text-grey text-decoration-none" href="#">Volunteer</a></li>
-        </ul>
+  <!-- Footer Start -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-contact">
+            <h2>Our Head Office</h2>
+            <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+            <p><i class="fa fa-envelope"></i>info@example.com</p>
+            <div class="footer-social">
+              <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+              <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-link">
+            <h2>Popular Links</h2>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+            <a href="">Popular Causes</a>
+            <a href="">Upcoming Events</a>
+            <a href="">Latest Blog</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-link">
+            <h2>Useful Links</h2>
+            <a href="">Terms of use</a>
+            <a href="">Privacy policy</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FQAs</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-newsletter">
+            <h2>Newsletter</h2>
+            <form>
+              <input class="form-control" placeholder="Email goes here">
+              <button class="btn btn-custom">Submit</button>
+              <label>Don't worry, we don't spam!</label>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
+    
   </div>
-
-</div>
-<div class="container-fluid py-3" style="background: #505050;">
-  <div class="container d-flex justify-content-between align-items-center text-white">
-    <span>Copyright © 2023 Learner Girls Foundation. All rights reserved.</span>
-    <!-- Social Media Icons -->
-    <div>
-      <a href="#" class="text-white"><i class="fa fa-facebook mx-1"></i></a>
-      <a href="#" class="text-white"><i class="fa fa-linkedin  mx-1"></i></a>
-      <a href="#" class="text-white"><i class="fa fa-instagram mx-1"></i></a>
-    </div>
-  </div>
-</div>
-
-
-
-<style>
-  .text-grey {
-    color: grey !important;
-    font-size: 12px !important;
-  }
-
-
-</style>
-</style>
+  <!-- Footer End -->
