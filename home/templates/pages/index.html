@@ -5,205 +5,226 @@
 {% block content %}
 
 
-        <!-- Video Modal Start-->
-        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>        
-                        <!-- 16:9 aspect ratio -->
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        <!-- Video Modal End -->
-        <!-- About Start -->
-        <div class="about">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img" data-parallax="scroll" data-image-src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (4).jpeg' %}"></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="section-header">
-                            <p>Learn About Us</p>
-                            <h2>Empowering Girls</h2>
-                        </div>
-                        <div class="about-tab">
-                            <ul class="nav nav-pills nav-justified">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content">
-                                <div id="tab-content-1" class="container tab-pane active">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae pellentesque turpis. Donec in hendrerit dui, vel blandit massa. Ut vestibulum suscipit cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget velit luctus dictum. Phasellus et felis sed purus tristique dignissim. Morbi sit amet leo at purus accumsan pellentesque. Vivamus fermentum nisi vel dapibus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div id="tab-content-2" class="container tab-pane fade">
-                                    Sed tincidunt, magna ut vehicula volutpat, turpis diam condimentum justo, posuere congue turpis massa in mi. Proin ornare at massa at fermentum. Nunc aliquet sed nisi iaculis ornare. Nam semper tortor eget est egestas, eu sagittis nunc sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent bibendum sapien sed purus molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div id="tab-content-3" class="container tab-pane fade">
-                                    Aliquam dolor odio, mollis sed feugiat sit amet, feugiat ut sapien. Nunc eu dignissim lorem. Suspendisse at hendrerit enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed condimentum semper turpis vel facilisis. Nunc vel faucibus orci. Mauris ut mauris rhoncus, efficitur nisi at, venenatis quam. Praesent egestas pretium enim sit amet finibus. Curabitur at erat molestie, tincidunt lorem eget, consequat ligula.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!-- Video Modal Start-->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                        allow="autoplay"></iframe>
                 </div>
             </div>
         </div>
-        <!-- About End -->
-
-
-        <!-- Service Start -->
-        <div class="service">
-            <div class="container">
+    </div>
+</div>
+<!-- Video Modal End -->
+<!-- About Start -->
+<div class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img" data-parallax="scroll"
+                    data-image-src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (4).jpeg' %}"></div>
+            </div>
+            <div class="col-lg-6">
                 <div class="section-header text-center">
-                    <p>What We Do?</p>
-                    <h2>Empowering Girls Through the Gift of Education</h2>
+                    <p>Learn About Us</p>
+                    <h2>Empowering Girls</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-diet"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Literacy for All:</h3>
-                                <p>Empowering children with literacy skills, one book at a time.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-water"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Girls' Education Matters:</h3>
-                                <p>Breaking barriers to education, nurturing future leaders</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-healthcare"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Community Development Focus</h3>
-                                <p>Strengthening communities through education and empowerment.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-education"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Impactful Partnerships</h3>
-                                <p>Collaborating for change, together we make a difference</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-home"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Empowering Through Mentorship</h3>
-                                <p>Guiding young minds towards a brighter future</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-social-care"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Promoting Social Justice</h3>
-                                <p>Advocating for equality and fairness in every sphere</p>
-                            </div>
+                <div class="about-tab">
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="tab-content-1" class="container tab-pane active">
+                            We are a grass-root non-profit organization striving to ensure that every child regardless
+                            of their geographical
+                            location has the opportunity to acquire literacy skills, access to books, digital skills,the
+                            right to social justice and
+                            youth empowerment in order to assist them in their quest to maximize their potential for
+                            success. The LGF has a
+                            fundamental duty to educate, inspire and provide skill training to young people. This is
+                            especially directed at girls in
+                            underprivileged communities where this has been dwarfed by poverty and outmoded cultural
+                            practices.
+                            We as a foundation are committed to the welfare of the youth and children. We believe
+                            occurrences such as teenage
+                            pregnancy and drug abuse are caused by young people who never had the fortune of a proper
+                            education. LGF embraces this
+                            responsibility to provide opportunities to all without discrimination on the grounds of
+                            their age, culture, nationality,
+                            creed, ethnicity, disability, gender, language, racial origin, or religious belief </div>
+                        <div id="tab-content-2" class="container tab-pane fade">
+                            Our mission i: ensuring that every individual in deprived communities has the opportunity to
+                            access quality education
+                            and training to reach full potential and reduce social vices. </div>
+                        <div id="tab-content-3" class="container tab-pane fade">
+                            LGF’s vision is to spearhead the growth of literacy, access to books, gender equality and
+                            social justice in communities
+                            in Ghana through dynamic, innovative and practical development programs.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Service End -->
-        
-        
-        <!-- Facts Start -->
-        <div class="facts" data-parallax="scroll" data-image-src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (1).jpeg' %}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="service">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>What We Do?</p>
+                <h2>Empowering Girls Through the Gift of Education</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="flaticon-diet"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>Literacy for All:</h3>
+                            <p>Empowering children with literacy skills, one book at a time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="flaticon-water"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>Girls' Education Matters:</h3>
+                            <p>Breaking barriers to education, nurturing future leaders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="flaticon-healthcare"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>Community Development Focus</h3>
+                            <p>Strengthening communities through education and empowerment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="flaticon-education"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>Impactful Partnerships</h3>
+                            <p>Collaborating for change, together we make a difference</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
                             <i class="flaticon-home"></i>
-                            <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">150</h3>
-                                <p>Countries</p>
-                            </div>
+                        </div>
+                        <div class="service-text">
+                            <h3>Empowering Through Mentorship</h3>
+                            <p>Guiding young minds towards a brighter future</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
-                            <i class="flaticon-charity"></i>
-                            <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">400</h3>
-                                <p>Volunteers</p>
-                            </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="flaticon-social-care"></i>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
-                            <i class="flaticon-kindness"></i>
-                            <div class="facts-text">
-                                <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
-                                <p>Our Goal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="facts-item">
-                            <i class="flaticon-donation"></i>
-                            <div class="facts-text">
-                                <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>
-                                <p>Raised</p>
-                            </div>
+                        <div class="service-text">
+                            <h3>Promoting Social Justice</h3>
+                            <p>Advocating for equality and fairness in every sphere</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Facts End -->
-        
-        
-        <!-- Causes Start -->
-        <div class="causes">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Popular Causes</p>
-                    <h2>Empowering through education and justice.</h2>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Facts Start -->
+    <div class="facts" data-parallax="scroll"
+        data-image-src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (1).jpeg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-home"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-plus" data-toggle="counter-up">150</h3>
+                            <p>Countries</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="owl-carousel causes-carousel">
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-charity"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-plus" data-toggle="counter-up">400</h3>
+                            <p>Volunteers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-kindness"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
+                            <p>Our Goal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="facts-item">
+                        <i class="flaticon-donation"></i>
+                        <div class="facts-text">
+                            <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>
+                            <p>Raised</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- Causes Start -->
+    <div class="causes">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Popular Causes</p>
+                <h2>Empowering through education and justice.</h2>
+            </div>
+            <div class="owl-carousel causes-carousel">
                 {% for cause in causes %}
                 <div class="causes-item">
                     <div class="causes-img">
-                        <img src="{{ cause.image.url }}" alt="{{ cause.title }}">
+                        <img style="height: 250px;" src="{{ cause.image.url }}" alt="{{ cause.title }}">
                     </div>
                     <div class="causes-progress">
                         <div class="progress">
@@ -228,221 +249,229 @@
                 </div>
                 {% endfor %}
 
-                    
-                </div>
+
             </div>
         </div>
-        <!-- Causes End -->
-        
-        
-        <!-- Donate Start -->
-        <div class="donate" data-parallax="scroll" data-image-src="{% static 'img/LGF-167.JPG' %}">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="donate-content">
-                            <div class="section-header">
-                                <p>Donate Now</p>
-                                <h2>Empower lives through your donations.</h2>
-                            </div>
-                            <div class="donate-text">
-                                <p>
-                                    Your generous donation holds the power to create lasting change in the lives of underprivileged children and
-                                    marginalized communities. With your support, we can continue our mission of providing access to education, promoting
-                                    social justice, and empowering girls to reach their full potential
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Your existing content -->
-                    <div class="col-lg-5">
-                        <div class="donate-form">
-                            <form method="post">
-                                {% csrf_token %}
-                                <div class="control-group">
-                                    <input type="text" class="form-control" name="full_name" placeholder="Full Name" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <input type="email" class="form-control" name="email" placeholder="Email" required="required" />
-                                </div>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-custom active">
-                                        <input type="radio" name="amount" value="20" checked> $20
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="amount" value="50"> $50
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="amount" value="100"> $100
-                                    </label>
-                                </div>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" name="customAmount" placeholder="custom Amount"/>
-                                </div>
-                                <div>
-                                    <button class="btn btn-custom" name="donation_submit" type="submit">Donate Now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Donate End -->
-        
-        
-        <!-- Event Start -->
-        <div class="event">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Upcoming Events</p>
-                    <h2>Be ready for our upcoming charity events</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (4).jpeg' %}" alt="Image">
-                            <div class="event-content">
-                               
-                                <div class="event-text">
-                                    <h3>Book Talk and Reading clubs</h3>
-                                 
-                                    <a class="btn btn-custom" href="">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (3).jpeg' %}" alt="Image">
-                            <div class="event-content">
-                                
-                                <div class="event-text">
-                                    <h3>Mentorship Program and Girls' Empowerment Annual Summit</h3>
-                                   
-                                    <a class="btn btn-custom" href="">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.55.25 AM (4).jpeg' %}" alt="Image">
-                            <div class="event-content">
-                    
-                                <div class="event-text">
-                                    <h3>LGF community libraries</h3>
-                    
-                                    <a class="btn btn-custom" href="">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (3).jpeg' %}" alt="Image">
-                            <div class="event-content">
-                    
-                                <div class="event-text">
-                                    <h3>Digital Inclusion Education program</h3>
-                    
-                                    <a class="btn btn-custom" href="">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Event End -->
+    </div>
+    <!-- Causes End -->
 
 
-        <!-- Team Start -->
-        <div class="team">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Meet Our Team</p>
-                    <h2>Awesome guys behind our charity activities</h2>
-                </div>
-                <div class="row">
-                    {% for member in team_members %}
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{{ member.img.url }}" alt="{{ member.first_name }} {{ member.last_name }}">
-                            </div>
-                            <div class="team-text">
-                                <h2>{{ member.first_name }} {{ member.last_name }}</h2>
-                                <p>{{ member.position }}</p>
-                               <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
+    <!-- Donate Start -->
+    <div class="donate" data-parallax="scroll" data-image-src="{% static 'img/LGF-167.JPG' %}">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="donate-content">
+                        <div class="section-header">
+                            <p>Donate Now</p>
+                            <h2>Empower lives through your donations.</h2>
+                        </div>
+                        <div class="donate-text">
+                            <p>
+                                Your generous donation holds the power to create lasting change in the lives of
+                                underprivileged children and
+                                marginalized communities. With your support, we can continue our mission of providing
+                                access to education, promoting
+                                social justice, and empowering girls to reach their full potential
+                            </p>
                         </div>
                     </div>
-                    {% endfor %}
+                </div>
+                <!-- Your existing content -->
+                <div class="col-lg-5">
+                    <div class="donate-form">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="full_name" placeholder="Full Name"
+                                    required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                    required="required" />
+                            </div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-custom active">
+                                    <input type="radio" name="amount" value="20" checked> $20
+                                </label>
+                                <label class="btn btn-custom">
+                                    <input type="radio" name="amount" value="50"> $50
+                                </label>
+                                <label class="btn btn-custom">
+                                    <input type="radio" name="amount" value="100"> $100
+                                </label>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="customAmount"
+                                    placeholder="custom Amount" />
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" name="donation_submit" type="submit">Donate Now</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
             </div>
         </div>
-        <!-- Team End -->
-        
-        
-        <!-- Volunteer Start -->
-        <div class="volunteer" data-parallax="scroll" data-image-src="{% static 'img/LGF-155.JPG' %}">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="volunteer-form">
-                            <form>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
-                                </div>
-                                <div>
-                                    <button class="btn btn-custom" type="submit">Become a volunteer</button>
-                                </div>
-                            </form>
+    </div>
+    <!-- Donate End -->
+
+
+    <!-- Event Start -->
+    <div class="event">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Upcoming Events</p>
+                <h2>Be ready for our upcoming charity events</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (4).jpeg' %}" alt="Image">
+                        <div class="event-content">
+
+                            <div class="event-text">
+                                <h3>Book Talk and Reading clubs</h3>
+
+                                <a class="btn btn-custom" href="">Read More</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="volunteer-content">
-                            <div class="section-header">
-                                <p>Become A Volunteer</p>
-                                <h2>Let’s make a difference in the lives of others</h2>
+                </div>
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (3).jpeg' %}" alt="Image">
+                        <div class="event-content">
+
+                            <div class="event-text">
+                                <h3>Mentorship Program and Girls' Empowerment Annual Summit</h3>
+
+                                <a class="btn btn-custom" href="">Read More</a>
                             </div>
-                            <div class="volunteer-text">
-                                <p>
-                                    Join our passionate volunteer network and be a part of the transformative journey. Together, we can inspire, educate,
-                                    and empower young minds, making a meaningful impact in underprivileged communities. Your time and dedication can shape a
-                                    brighter future for the next generation.
-                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.55.25 AM (4).jpeg' %}" alt="Image">
+                        <div class="event-content">
+
+                            <div class="event-text">
+                                <h3>LGF community libraries</h3>
+
+                                <a class="btn btn-custom" href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (3).jpeg' %}" alt="Image">
+                        <div class="event-content">
+
+                            <div class="event-text">
+                                <h3>Digital Inclusion Education program</h3>
+
+                                <a class="btn btn-custom" href="">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Volunteer End -->
-        
-        
-        <!-- Testimonial Start -->
-        <div class="testimonial">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Testimonial</p>
-                    <h2>What people are talking about our charity activities</h2>
+    </div>
+    <!-- Event End -->
+
+
+    <!-- Team Start -->
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Meet Our Team</p>
+                <h2>Awesome guys behind our charity activities</h2>
+            </div>
+            <div class="row">
+                {% for member in team_members %}
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{{ member.img.url }}" alt="{{ member.first_name }} {{ member.last_name }}">
+                        </div>
+                        <div class="team-text">
+                            <h2>{{ member.first_name }} {{ member.last_name }}</h2>
+                            <p>{{ member.position }}</p>
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="owl-carousel testimonials-carousel">
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Volunteer Start -->
+    <div class="volunteer" data-parallax="scroll" data-image-src="{% static 'img/LGF-155.JPG' %}">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="volunteer-form">
+                        <form>
+                            <div class="control-group">
+                                <input type="text" class="form-control" placeholder="Name" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" placeholder="Email" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" placeholder="Why you want to become a volunteer?"
+                                    required="required"></textarea>
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" type="submit">Become a volunteer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="volunteer-content">
+                        <div class="section-header">
+                            <p>Become A Volunteer</p>
+                            <h2>Let’s make a difference in the lives of others</h2>
+                        </div>
+                        <div class="volunteer-text">
+                            <p>
+                                Join our passionate volunteer network and be a part of the transformative journey.
+                                Together, we can inspire, educate,
+                                and empower young minds, making a meaningful impact in underprivileged communities. Your
+                                time and dedication can shape a
+                                brighter future for the next generation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Volunteer End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="testimonial">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Testimonial</p>
+                <h2>What people are talking about our charity activities</h2>
+            </div>
+            <div class="owl-carousel testimonials-carousel">
                 {% for testimonial in testimonials %}
                 <div class="testimonial-item">
                     <div class="testimonial-profile">
@@ -460,71 +489,72 @@
                 </div>
                 {% endfor %}
 
-                    
-                </div>
+
             </div>
         </div>
-        <!-- Testimonial End -->
-        
-        
-        <!-- Contact Start -->
-        <div class="contact">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Get In Touch</p>
-                    <h2>Contact for any query</h2>
-                </div>
-                <div class="contact-img">
-                    <img src="{% static 'img/LGF-125.jpg' %}" alt="Image">
-                </div>
-                <div class="contact-form">
-                    <div id="success">
-                        {% if success_message %}
-                        <div class="alert alert-success">
-                            {{ success_message }}
-                        </div>
-                        {% endif %}
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Contact Start -->
+    <div class="contact">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Get In Touch</p>
+                <h2>Contact for any query</h2>
+            </div>
+            <div class="contact-img">
+                <img src="{% static 'img/LGF-125.jpg' %}" alt="Image">
+            </div>
+            <div class="contact-form">
+                <div id="success">
+                    {% if success_message %}
+                    <div class="alert alert-success">
+                        {{ success_message }}
                     </div>
-                    <form name="sentMessage" id="contactForm" method="post" novalidate="novalidate">
-                        {% csrf_token %}
-                        <div class="control-group">
-                            <input type="text" class="form-control" name="full_name" id="name" placeholder="Your Name"
-                                required="required" data-validation-required-message="Please enter your name" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                                required="required" data-validation-required-message="Please enter your email" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" name="phone" id="subject" placeholder="Phone Number"
-                                required="required" data-validation-required-message="Please enter your phone number" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" name="message" id="message" placeholder="Message" required="required"
-                                data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-custom" name="contact_submit" type="submit" id="sendMessageButton">Send Message</button>
-                        </div>
-                    </form>
+                    {% endif %}
                 </div>
-
+                <form name="sentMessage" id="contactForm" method="post" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="control-group">
+                        <input type="text" class="form-control" name="full_name" id="name" placeholder="Your Name"
+                            required="required" data-validation-required-message="Please enter your name" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                            required="required" data-validation-required-message="Please enter your email" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <input type="text" class="form-control" name="phone" id="subject" placeholder="Phone Number"
+                            required="required" data-validation-required-message="Please enter your phone number" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <textarea class="form-control" name="message" id="message" placeholder="Message"
+                            required="required" data-validation-required-message="Please enter your message"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div>
+                        <button class="btn btn-custom" name="contact_submit" type="submit" id="sendMessageButton">Send
+                            Message</button>
+                    </div>
+                </form>
             </div>
+
         </div>
-        <!-- Contact End -->
+    </div>
+    <!-- Contact End -->
 
 
-        <!-- Blog Start -->
-        <div class="blog">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Our Blog</p>
-                    <h2>Latest news & articles directly from our blog</h2>
-                </div>
+    <!-- Blog Start -->
+    <div class="blog">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Our Blog</p>
+                <h2>Latest news & articles directly from our blog</h2>
+            </div>
             <div class="row">
                 {% for blog in random_blogs %}
                 <div class="col-lg-4">
@@ -547,25 +577,21 @@
                 {% endfor %}
             </div>
 
-            </div>
         </div>
-        <!-- Blog End -->
+    </div>
+    <!-- Blog End -->
 
 
-      {% include "shared/footer.html" %}
-        
-        <!-- Back to top button -->
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
-        </div>
+    {% include "shared/footer.html" %}
 
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-
-{% endblock %}
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+        <div class="loader"></div>
+    </div>
 
 
 
-
+    {% endblock %}

@@ -62,7 +62,7 @@ def home(request):
         
         if 'donation_submit' in request.POST:
             if request.method == 'POST':
-                name = request.POST.get('name')
+                name = request.POST.get('full_name')
                 email = request.POST.get('email')
                 amount = request.POST.get('amount')
                 custom_amount = request.POST.get('customAmount')
