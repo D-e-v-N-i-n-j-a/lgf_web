@@ -34,6 +34,10 @@ def blogs(request):
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     comments = Comment.objects.filter(blog=blog)
+    
+    comment_count = comments.count()
+    
+    
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -58,6 +62,6 @@ def blog_details(request, blog_id):
     else:
         form = CommentForm() 
 
-    return render(request, 'pages/single.html', {'blog': blog, 'comments': comments, 'form': form})
+    return render(request, 'pages/single.html', {'blog': blog, 'comments': comments,'comment_count': comment_count,'form': form})
 
 

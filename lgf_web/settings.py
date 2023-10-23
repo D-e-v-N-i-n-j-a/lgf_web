@@ -31,14 +31,27 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'home',
 ]
+
+
+# JAZZMIN SETTINGS
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Learners Girls Foundation Admin",
+    "site_header": "LGF Admin Site",
+    "welcome_sign": "Welcome to LGF",
+    "site_brand": "LGF",
+    "site_logo": "img/logo.png",
+    "hide_models": ['auth.user'],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

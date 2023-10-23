@@ -154,63 +154,22 @@
                     <h2>What people are talking about our charity activities</h2>
                 </div>
                 <div class="owl-carousel testimonials-carousel">
+                    {% for testimonial in testimonials %}
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/testimonial-1.jpg" alt="Image">
+                            <img src="{{ testimonial.testimonial_image.url }}" alt="Image"> {# Use the image from the model #}
                             <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
+                                <h3>{{ testimonial.person_name }}</h3>
+                                <p>{{ testimonial.profession }}</p>
                             </div>
                         </div>
                         <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
+                            <p>{{ testimonial.testimonial_text }}</p>
                         </div>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-2.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-3.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-4.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
+
             </div>
         </div>
         <!-- Testimonial End -->

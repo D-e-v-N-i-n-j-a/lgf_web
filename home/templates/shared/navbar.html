@@ -19,14 +19,7 @@
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="{% url 'home:about' %}" class="nav-item nav-link">About</a>
                         <a href="{% url 'home:blog' %}" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Join Us</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">volunteer</a>
-                                <a href="#" class="dropdown-item">What We Do</a>
-                               
-                            </div>
-                        </div>
+                        <a href="{% url 'home:donate' %}" class="nav-item nav-link">Donate</a>
                     </div>
                 </div>
             </div>

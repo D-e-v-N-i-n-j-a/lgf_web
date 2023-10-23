@@ -34,26 +34,26 @@
                 <h2>Latest news & articles directly from our blog</h2>
             </div>
             <div class="row">
-                {% for blog in blogs %}
-                <div class="col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="{{ blog.images.url }}" alt="{{ blog.title }}">
-                        </div>
-                        <div class="blog-text">
-                            <h3><a href="{% url 'home:blog-details' blog_id=blog.id %}">{{ blog.title }}</a></h3>
-
-                            <p>
-                                {{ blog.content|slice:":100" }}{% if blog.content|length > 100 %}...{% endif %}
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <p><i class="fa fa-user"></i><a href="">{{ blog.author }}</a></p>
-                            <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
-                        </div>
+            {% for blog in blogs %}
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="{{ blog.images.url }}" alt="{{ blog.title }}">
+                    </div>
+                    <div class="blog-text">
+                        <h3><a href="{% url 'home:blog-details' blog_id=blog.id %}">{{ blog.title }}</a></h3>
+                        <p>
+                            {{ blog.content|slice:":100" }}{% if blog.content|length > 100 %}...{% endif %}
+                        </p>
+                    </div>
+                    <div class="blog-meta">
+                        <p><i class="fa fa-user"></i><a href="">{{ blog.author }}</a></p>
+                        <p><i class="fa fa-comments"></i><a href="{% url 'home:blog-details' blog_id=blog.id %}">{{comment_count }} Comments</a></p>
                     </div>
                 </div>
-                {% endfor %}
+            </div>
+            {% endfor %}
+
             </div>
             <div class="row">
                 <div class="col-12">

@@ -25,7 +25,7 @@ urlpatterns = [
     path('volunteer',volunteer,name="volunteer"),
     # path('funRaising',funRaising,name='fun_raising'),
     # path('community_library',community_library,name='community_library'),
-    # path('book_talk',bookTalk,name='book_talk')
+    path('book_talk',bookTalk,name='book_talk')
 ]
 
  

@@ -1,0 +1,115 @@
+{% load static %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h4 class="text-center">PROJECT MODEL</h4>
+        <p>LGF BOOK TALK MODEL</p>
+    </div>
+    <div class="row my-5">
+        <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+            <div class="card_ d-flex position-relative flex-column">
+                <div class='imgContainer'>
+                    <img
+                        src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (4).jpeg' %}">
+                </div>
+                <div class="content">
+                    <h4>First Phase</h4>
+                    <p>This involves presentation of books at a conference setting with breakout
+                        sessions. The book facilitations will be done by authors and facilitators, who will discuss the
+                        content to the students and the story’s central idea with regular read-aloud activities to help
+                        the learners with presentation skills (volume, clarity, speed, persuasive language, grammar,
+                        etc.).</p>
+                    <a href="{% url 'home:donate' %}" class="btn btn-custom">Donate Now</a>
+
+                </div>
+            </div>
+            <div class="card_ d-flex position-relative flex-column">
+                <div class='imgContainer'>
+                    <img
+                        src="{% static 'img/WhatsApp Image 2023-09-23 at 6.55.25 AM (4).jpeg' %}">
+                </div>
+                <div class="content">
+                    <h4>Second Phase</h4>
+                    <p>This involves distribution of books to teacher mentors in schools, who will
+                        facilitate students into reading of the books.</p>
+                    <a href="{% url 'home:donate' %}" class="btn btn-custom">Donate Now</a>
+
+                </div>
+            </div>
+            <div class="card_ d-flex position-relative flex-column">
+                <div class='imgContainer'>
+                    <img
+                        src="{% static 'img/WhatsApp Image 2023-09-23 at 6.55.25 AM.jpeg' %}">
+                </div>
+                <div class="content">
+                    <h4>Third Phase</h4>
+                    <p>Children are tasked to re-narrate the books presented in the book talk after
+                        the have read the entire book in a period of one month with the support of their teachers, the
+                        best narratives will be awarded and uploaded on Learners Girls Foundation website on
+                        children book reviews.</p>
+                    <a href="{% url 'home:donate' %}" class="btn btn-custom">Donate Now</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.container .card_
+{
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .card_:hover
+{
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+.container .card_ .imgContainer
+{
+    position: relative;
+    width:250px;
+    height:250px;
+    top:-50px;
+    left:10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.container .card_ .imgContainer img
+{
+    max-width: 100%;
+    border-radius: 4px;
+}
+.container .card_ .content
+{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.container .card_:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 330px){
+    .container .card_ .imgContainer{
+        left: -2px;
+    }
+}
+</style>
+
