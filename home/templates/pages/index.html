@@ -393,23 +393,23 @@
             </div>
             <div class="row">
                 {% for member in team_members %}
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{ member.img.url }}" alt="{{ member.first_name }} {{ member.last_name }}">
-                        </div>
-                        <div class="team-text">
-                            <h2>{{ member.first_name }} {{ member.last_name }}</h2>
-                            <p>{{ member.position }}</p>
-                            <div class="team-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+            <div class="container overflow-hidden">
+                <div class="row gy-4 gy-lg-0 gx-xxl-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="{{member.img.url}}" alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">Flora Nyra</h4>
+                                        <p class="text-secondary mb-0">Product Manager</p>
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
                 {% endfor %}
             </div>
 
@@ -464,36 +464,7 @@
     <!-- Volunteer End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="testimonial">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>Testimonial</p>
-                <h2>What people are talking about our charity activities</h2>
-            </div>
-            <div class="owl-carousel testimonials-carousel">
-                {% for testimonial in testimonials %}
-                <div class="testimonial-item">
-                    <div class="testimonial-profile">
-                        <img src="{{ testimonial.testimonial_image.url }}" alt="{{ testimonial.person_name }}">
-                        <div class="testimonial-name">
-                            <h3>{{ testimonial.person_name }}</h3>
-                            <p>{{ testimonial.profession }}</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-text">
-                        <p>
-                            {{ testimonial.testimonial_text }}
-                        </p>
-                    </div>
-                </div>
-                {% endfor %}
-
-
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
+ 
 
 
     <!-- Contact Start -->
