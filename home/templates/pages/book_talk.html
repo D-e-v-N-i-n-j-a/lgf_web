@@ -1,0 +1,40 @@
+{% extends "shared/base.html" %}
+{% load static %}
+
+{% block carousel %}
+<!-- This block is empty, so the carousel from base.html won't be included -->
+{% endblock %}
+
+{% block content %}
+<!-- Introduction Section -->
+<section class="container mt-5">
+    <h2 class="text-center">Introduction</h2>
+    <p>
+        A Multi-Dimensional Child Poverty analysis in Ghana by UNICEF in 2020 reveals that the vulnerability of children
+        is based on several factors drawn from their different socio-economic, household and geographic characteristics.
+        It reveals that approximately three-in-four children (73.4 per cent) in Ghana are identified as
+        multi-dimensionally poor, facing at least three deprivations at the same time in Ghana. However, rural children
+        largely in Northern Ghana are more vulnerable to multi-dimensional poverty with about 81.5 as against the
+        national average of 62.5 per cent. This adversely hinders’ the country’s ability to achieve the SDG target
+        1.2.2; which aims is to reduce this multi-dimensional poverty rate by at least half by 2030 from 73.4 to 36.7
+        per cent.
+        Children from Northern Ghana, continue to experience poverty as the lack of education, nutrition, water or
+        health services remains a serious issue to reckon with. The lack of these basic needs often results in deficits
+        that cannot easily be overcome later in life. For instance, the number of school dropouts remained high at
+        around 128,994 for males and 79,111 for females at the primary and Junior High School levels for the year 2019.
+        (UNESCO Institute of Statistics, 2020). National data collected by the Education Management Information System
+        of the Ministry of Education demonstrate that 7,575 girls in elementary and Senior High Schools have truncated
+        their education due to unplanned pregnancy. A further analysis of the data reviews that 80% of the school
+        dropouts are in deprived areas in the Northern Region.
+    </p>
+</section>
+
+<!-- PROJECT MODEL SECTION-->
+{% include "components/project_models.html" %}
+
+
+{% include "components/goals.html" %}
+
+ {% include "shared/footer.html" %}
+
+{% endblock %}
