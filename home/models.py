@@ -32,6 +32,9 @@ class BoardMembers(models.Model):
     img = models.ImageField(upload_to='team_images')
     date_added = models.DateTimeField(auto_now_add=True)
     
+    def __str__(self) -> str:
+        return str(self.first_name + " " + self.last_name)
+    
     
 
 class OurWork(models.Model):

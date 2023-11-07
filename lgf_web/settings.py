@@ -49,7 +49,7 @@ JAZZMIN_SETTINGS = {
     "site_header": "LGF Admin Site",
     "welcome_sign": "Welcome to LGF",
     "site_brand": "LGF",
-    "site_logo": "img/logo.png",
+    "site_logo": "img/logo__.png",
     "hide_models": ['auth.user'],
 }
 

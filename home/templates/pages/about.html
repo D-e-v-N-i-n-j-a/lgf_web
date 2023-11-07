@@ -136,7 +136,7 @@
                         <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
                             <div class="card-body p-0">
                                 <figure class="m-0 p-0">
-                                    <img class="img-fluid" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
+                                    <img class="img-fluid my_img" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
                                     <figcaption class="m-0 p-4">
                                         <h4 class="mb-1">{{ member.name }}</h4>
                                         <p class="text-secondary mb-0">{{ member.role }}</p>
@@ -163,7 +163,7 @@
                         <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
                             <div class="card-body p-0">
                                 <figure class="m-0 p-0">
-                                    <img class="img-fluid" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
+                                    <img class="img-fluid my_img" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
                                     <figcaption class="m-0 p-4">
                                         <h4 class="mb-1">{{ member.first_name }} {{member.last_name}}</h4>
                                         <p class="text-secondary mb-0">{{ member.position }}</p>
@@ -218,10 +218,15 @@
         </div>
 
         
-
-
 {% endblock %}
 
+<style>
+    .my_img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+</style>
 
 
 
