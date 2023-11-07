@@ -122,64 +122,69 @@
         </div>
         <!-- Facts End -->
 
-
-        <!-- Team Start -->
-        <div class="team">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Meet Our Team</p>
-                  
-                </div>
-                <div class="row">
-                    {% for member in teams %}
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
-                            <div class="card-body p-0">
-                                <figure class="m-0 p-0">
-                                    <img class="img-fluid my_img" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
-                                    <figcaption class="m-0 p-4">
-                                        <h4 class="mb-1">{{ member.name }}</h4>
-                                        <p class="text-secondary mb-0">{{ member.role }}</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-
-            </div>
-        </div>
         <!-- Team End -->
         <!-- Team Start -->
-        <div class="team">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Meet Our Board Members</p>
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Meet Our Board Members</p>
+            </div>
+            <div class="row">
+                {% for member in board_members %}
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                        <div class="card-body p-0">
+                            <figure class="m-0 p-0">
+                                <img class="img-fluid my_img" loading="lazy" src="{{ member.img.url }}"
+                                    alt="{{ member.name }}">
+                                <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">{{ member.first_name }} {{ member.last_name }}</h4>
+                                    <p class="text-secondary mb-0">{{ member.position }}</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#modal{{ member.id }}">
+                                        View Details
+                                    </button>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    {% for member in board_members %}
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
-                            <div class="card-body p-0">
-                                <figure class="m-0 p-0">
-                                    <img class="img-fluid my_img" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
-                                    <figcaption class="m-0 p-4">
-                                        <h4 class="mb-1">{{ member.first_name }} {{member.last_name}}</h4>
-                                        <p class="text-secondary mb-0">{{ member.position }}</p>
-                                    </figcaption>
-                                </figure>
+    
+                <!-- Modal -->
+                <div class="modal fade" id="modal{{ member.id }}" tabindex="-1" role="dialog"
+                    aria-labelledby="modalTitle{{ member.id }}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle{{ member.id }}">{{ member.first_name }} {{member.last_name }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Add content for each member's details -->
+                                <!-- Example: -->
+                                <img class="img-fluid" src="{{ member.img.url }}" alt="{{ member.name }}">
+                                <p>{{ member.details }}</p>
+                                <p>Position: {{ member.position }}</p>
+                                <!--  -->
+                                <div class="mt-3">
+                                    <p>
+                                        {{member.description}}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
-
+                {% endfor %}
             </div>
         </div>
+    </div>
+
         
         <!-- Testimonial Start -->
-        <div class="testimonial">
+        <!-- <div class="testimonial">
             <div class="container">
                 <div class="section-header text-center">
                     <p>Testimonial</p>
@@ -203,7 +208,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
         <!-- Testimonial End -->
 
 

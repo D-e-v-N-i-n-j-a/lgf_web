@@ -15,13 +15,13 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Blog,BlogAdmin)
-admin.site.register(Team)
+# admin.site.register(Team)
 admin.site.register(BoardMembers)
-admin.site.register(Projects,ProjectAdmin)
-admin.site.register(Metrics)
+# admin.site.register(Projects,ProjectAdmin)
+# admin.site.register(Metrics)
 admin.site.register(LibraryPictures),
-admin.site.register(OurWork)
+# admin.site.register(OurWork)
 admin.site.register(Testimonial)
-admin.site.register(Cause)
+# admin.site.register(Cause)
 
 

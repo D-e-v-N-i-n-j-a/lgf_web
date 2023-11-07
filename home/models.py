@@ -28,6 +28,7 @@ class BoardMembers(models.Model):
     middle_name = models.CharField(null=True,blank=True,max_length=100)
     last_name = models.CharField(max_length=100)
     position = models.CharField(max_length=100)
+    description = models.TextField()
     email = models.EmailField(unique=True)
     img = models.ImageField(upload_to='team_images')
     date_added = models.DateTimeField(auto_now_add=True)
