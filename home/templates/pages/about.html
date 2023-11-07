@@ -132,27 +132,22 @@
                 </div>
                 <div class="row">
                     {% for member in teams %}
-                    <!-- Team 1 - Bootstrap Brain Component -->
-            
-                        <div class="container overflow-hidden">
-                            <div class="row gy-4 gy-lg-0 gx-xxl-5">
-                                <div class="col-12 col-md-6 col-lg-3">
-                                    <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
-                                        <div class="card-body p-0">
-                                            <figure class="m-0 p-0">
-                                                <img class="img-fluid" loading="lazy" src="{{member.img.url}}" alt="Flora Nyra">
-                                                <figcaption class="m-0 p-4">
-                                                    <h4 class="mb-1">Flora Nyra</h4>
-                                                    <p class="text-secondary mb-0">Product Manager</p>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">{{ member.name }}</h4>
+                                        <p class="text-secondary mb-0">{{ member.role }}</p>
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
+                    </div>
                     {% endfor %}
                 </div>
+
             </div>
         </div>
         <!-- Team End -->
@@ -163,28 +158,23 @@
                     <p>Meet Our Board Members</p>
                 </div>
                 <div class="row">
-                    {% for members in board_members %}
-                    <!-- Team 1 - Bootstrap Brain Component -->
-        
-                    <div class="container overflow-hidden">
-                        <div class="row gy-4 gy-lg-0 gx-xxl-5">
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
-                                    <div class="card-body p-0">
-                                        <figure class="m-0 p-0">
-                                            <img class="img-fluid" loading="lazy" src="{{members.img.url}}" alt="Flora Nyra">
-                                            <figcaption class="m-0 p-4">
-                                                <h4 class="mb-1">{{members.first_name}}{{members.last_name}}</h4>
-                                                <p class="text-secondary mb-0">{{members.position}}</p>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                </div>
+                    {% for member in board_members %}
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="{{ member.img.url }}" alt="{{ member.name }}">
+                                    <figcaption class="m-0 p-4">
+                                        <h4 class="mb-1">{{ member.first_name }} {{member.last_name}}</h4>
+                                        <p class="text-secondary mb-0">{{ member.position }}</p>
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
+
             </div>
         </div>
         
