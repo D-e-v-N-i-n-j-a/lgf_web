@@ -211,45 +211,7 @@
 
 
     <!-- Causes Start -->
-    <div class="causes">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>Popular Causes</p>
-                <h2>Empowering through education and justice.</h2>
-            </div>
-            <div class="owl-carousel causes-carousel">
-                {% for cause in causes %}
-                <div class="causes-item">
-                    <div class="causes-img">
-                        <img style="height: 250px;" src="{{ cause.image.url }}" alt="{{ cause.title }}">
-                    </div>
-                    <div class="causes-progress">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ cause.progress_percentage }}"
-                                aria-valuemin="0" aria-valuemax="100">
-                                <span>{{ cause.progress_percentage }}%</span>
-                            </div>
-                        </div>
-                        <div class="progress-text">
-                            <p><strong>Raised:</strong> ${{ cause.raised_amount }}</p>
-                            <p><strong>Goal:</strong> ${{ cause.goal_amount }}</p>
-                        </div>
-                    </div>
-                    <div class="causes-text">
-                        <h3>{{ cause.title }}</h3>
-                        <p>{{ cause.description }}</p>
-                    </div>
-                    <div class="causes-btn">
-                        <a class="btn btn-custom">Learn More</a>
-                        <a href="{% url 'home:donate' %}" class="btn btn-custom">Donate Now</a>
-                    </div>
-                </div>
-                {% endfor %}
-
-
-            </div>
-        </div>
-    </div>
+ 
     <!-- Causes End -->
 
 
@@ -534,6 +496,7 @@
 
 
     <!-- Blog Start -->
+    {% for blog in random_blogs %}
     <div class="blog">
         <div class="container">
             <div class="section-header text-center">
@@ -541,7 +504,7 @@
                 <h2>Latest news & articles directly from our blog</h2>
             </div>
             <div class="row">
-                {% for blog in random_blogs %}
+               
                 <div class="col-lg-4">
                     <div class="blog-item">
                         <div class="blog-img">
@@ -559,11 +522,12 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                
             </div>
 
         </div>
     </div>
+    {% endfor %}
     <!-- Blog End -->
 
 
