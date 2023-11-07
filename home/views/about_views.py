@@ -2,7 +2,7 @@ from django.shortcuts import  render
 from django.core.mail import send_mail
 from django.conf import settings
 
-from home.models import ContactFormSubmission,Team,Testimonial
+from home.models import ContactFormSubmission,Team,Testimonial,BoardMembers
 
 
 
@@ -11,6 +11,7 @@ def aboutUs(request):
     success_message = None
     teams = Team.objects.all()
     testimonial = Testimonial.objects.all()
+    board_members = BoardMembers.objects.all()
 
     if request.method == 'POST':
         full_name = request.POST['full_name']
@@ -39,7 +40,7 @@ def aboutUs(request):
         except Exception as e:
             success_message = None
 
-    return render(request, 'pages/about.html', {'success_message': success_message,'teams': teams,'testimonials':testimonial})
+    return render(request, 'pages/about.html', {'success_message': success_message,'teams': teams,'testimonials':testimonial,'board_members':board_members})
 
 
 

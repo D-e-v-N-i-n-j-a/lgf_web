@@ -50,13 +50,23 @@
 
                             <div class="tab-content">
                                 <div id="tab-content-1" class="container tab-pane active">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae pellentesque turpis. Donec in hendrerit dui, vel blandit massa. Ut vestibulum suscipit cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget velit luctus dictum. Phasellus et felis sed purus tristique dignissim. Morbi sit amet leo at purus accumsan pellentesque. Vivamus fermentum nisi vel dapibus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    We are a grass-root non-profit organization striving to ensure that every child regardless of their geographical
+                                    location has the opportunity to acquire literacy skills, access to books, digital skills,the right to social justice and
+                                    youth empowerment in order to assist them in their quest to maximize their potential for success. The LGF has a
+                                    fundamental duty to educate, inspire and provide skill training to young people. This is especially directed at girls in
+                                    underprivileged communities where this has been dwarfed by poverty and outmoded cultural practices. We as a foundation
+                                    are committed to the welfare of the youth and children. We believe occurrences such as teenage pregnancy and drug abuse
+                                    are caused by young people who never had the fortune of a proper education. LGF embraces this responsibility to provide
+                                    opportunities to all without discrimination on the grounds of their age, culture, nationality, creed, ethnicity,
+                                    disability, gender, language, racial origin, or religious belief
                                 </div>
                                 <div id="tab-content-2" class="container tab-pane fade">
-                                    Sed tincidunt, magna ut vehicula volutpat, turpis diam condimentum justo, posuere congue turpis massa in mi. Proin ornare at massa at fermentum. Nunc aliquet sed nisi iaculis ornare. Nam semper tortor eget est egestas, eu sagittis nunc sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent bibendum sapien sed purus molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Our mission: ensuring that every individual in deprived communities has the opportunity to access quality education
+                                    and training to reach full potential and reduce social vices.
                                 </div>
                                 <div id="tab-content-3" class="container tab-pane fade">
-                                    Aliquam dolor odio, mollis sed feugiat sit amet, feugiat ut sapien. Nunc eu dignissim lorem. Suspendisse at hendrerit enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed condimentum semper turpis vel facilisis. Nunc vel faucibus orci. Mauris ut mauris rhoncus, efficitur nisi at, venenatis quam. Praesent egestas pretium enim sit amet finibus. Curabitur at erat molestie, tincidunt lorem eget, consequat ligula.
+                                    LGF’s vision is to spearhead the growth of literacy, access to books, gender equality and social justice in communities
+                                    in Ghana through dynamic, innovative and practical development programs.
                                 </div>
                             </div>
                         </div>
@@ -118,7 +128,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Meet Our Team</p>
-                    <h2>Awesome guys behind our charity activities</h2>
+                  
                 </div>
                 <div class="row">
                     {% for member in teams %}
@@ -146,7 +156,37 @@
             </div>
         </div>
         <!-- Team End -->
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Meet Our Board Members</p>
+                </div>
+                <div class="row">
+                    {% for members in board_members %}
+                    <!-- Team 1 - Bootstrap Brain Component -->
         
+                    <div class="container overflow-hidden">
+                        <div class="row gy-4 gy-lg-0 gx-xxl-5">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                                    <div class="card-body p-0">
+                                        <figure class="m-0 p-0">
+                                            <img class="img-fluid" loading="lazy" src="{{members.img.url}}" alt="Flora Nyra">
+                                            <figcaption class="m-0 p-4">
+                                                <h4 class="mb-1">{{members.first_name}}{{members.last_name}}</h4>
+                                                <p class="text-secondary mb-0">{{members.position}}</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
         
         <!-- Testimonial Start -->
         <div class="testimonial">
