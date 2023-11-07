@@ -44,38 +44,35 @@
       </div>
       <div class="col-lg-5">
         <div class="donate-form">
-          <form>
-            <div class="control-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Name"
-                required="required"
-              />
-            </div>
-            <div class="control-group">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Email"
-                required="required"
-              />
-            </div>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-custom active">
-                <input type="radio" name="options" checked /> $10
-              </label>
-              <label class="btn btn-custom">
-                <input type="radio" name="options" /> $20
-              </label>
-              <label class="btn btn-custom">
-                <input type="radio" name="options" /> $30
-              </label>
-            </div>
-            <div>
-              <button class="btn btn-custom" type="submit">Donate Now</button>
-            </div>
-          </form>
+         <form method="post">
+                            {% csrf_token %}
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="full_name" placeholder="Full Name"
+                                    required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                    required="required" />
+                            </div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-custom active">
+                                    <input type="radio" name="amount" value="20" checked> $20
+                                </label>
+                                <label class="btn btn-custom">
+                                    <input type="radio" name="amount" value="50"> $50
+                                </label>
+                                <label class="btn btn-custom">
+                                    <input type="radio" name="amount" value="100"> $100
+                                </label>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="customAmount"
+                                    placeholder="custom Amount" />
+                            </div>
+                            <div>
+                                <button class="btn btn-custom" name="donation_submit" type="submit">Donate Now</button>
+                            </div>
+                        </form>
         </div>
       </div>
     </div>

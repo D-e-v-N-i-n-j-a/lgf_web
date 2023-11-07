@@ -6,8 +6,9 @@ from .views.blog_views import blog_details,blogs
 from .views.partner_views import partnerForm,partnership
 from .views.fun_raising_views import funRaising
 from .views.volunteer import volunteer
-from .views.library_views import community_library
+from .views.library_views import community_library,gallery
 from .views.book_talk_views import bookTalk
+
 
 
 
@@ -23,8 +24,8 @@ urlpatterns = [
     # path('partnerForm',partnerForm,name='partnerForm'),
     path('blog/<int:blog_id>/', blog_details, name='blog-details'),
     path('volunteer',volunteer,name="volunteer"),
-    # path('funRaising',funRaising,name='fun_raising'),
-    # path('community_library',community_library,name='community_library'),
+    path('gallery',gallery,name='gallery'),
+    path('community_library',community_library,name='community_library'),
     path('book_talk',bookTalk,name='book_talk')
 ]
 

@@ -14,11 +14,10 @@ paypalrestsdk.configure({
 def donate(request):
     if request.method == 'POST':
         
-        name = request.POST.get('name')
+        name = request.POST.get('full_name')
         email = request.POST.get('email')
-        amount = request.POST.get('donationAmount')
+        amount = request.POST.get('amount')
         custom_amount = request.POST.get('customAmount')
-        message_ = request.POST.get('message')
 
         if amount:
             print(f"Amount: {amount}")
@@ -58,7 +57,7 @@ def donate(request):
             message = f"Full Name: {name}\n"
             message += f"Email: {email}\n"
             message += f"Amount: {total_amount}\n"
-            message += f"Message: {message_}\n"
+            message += f"Message: {message}\n"
             send_mail(
                 subject = 'Donation Made',
                 message = message,

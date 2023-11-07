@@ -1,0 +1,22 @@
+{% extends "shared/base.html" %}
+{% load static %}
+
+
+
+{% block carousel %}
+    <!-- This block is empty, so the carousel from base.html won't be included -->
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        {% for picture in gallery %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ picture.image.url }}" class="card-img-top" alt="{{ picture.description }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
