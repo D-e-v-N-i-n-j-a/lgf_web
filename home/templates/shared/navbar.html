@@ -7,7 +7,7 @@
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
                  <a class="navbar-brand" href="/">
-                 <img src="{% static 'img/logo.png' %}" alt="Learners Girls Foundation" class="d-inline-block align-top rounded-circle">
+                 <img src="{% static 'img/logo__.png' %}" alt="Learners Girls Foundation" class="d-inline-block align-top rounded-circle">
                 
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -18,8 +18,10 @@
                     <div class="navbar-nav ml-auto">
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="{% url 'home:about' %}" class="nav-item nav-link">About</a>
-                        <a href="{% url 'home:blog' %}" class="nav-item nav-link">Blog</a>
                         <a href="{% url 'home:donate' %}" class="nav-item nav-link">Donate</a>
+                        <a href="{% url 'home:blog' %}" class="nav-item nav-link">Blog</a>
+                        <a href="{% url 'home:volunteer' %}" class="nav-item nav-link">Join us</a>
+                       
                     </div>
                 </div>
             </div>

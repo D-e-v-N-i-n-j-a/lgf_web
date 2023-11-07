@@ -13,10 +13,8 @@
         <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.2/components/teams/team-1/assets/css/team-1.css">
         <!-- Template Stylesheet -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
- 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -26,7 +24,94 @@
       
     {% include 'shared/navbar.html' %}
 
-    
+     {% block carousel %}
+  <!-- Carousel Start -->
+    <div class="carousel">
+        <div class="container-fluid">
+            <div class="owl-carousel">
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="{% static 'img/DSC_6951.jpg' %}" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Empowering Tomorrow's Leaders</h1>
+                        <p>
+                        Unlocking the hidden potential within each and every girl, one at a time, through education, mentorship, and empowerment
+                        programs that build strong foundations for future leaders and change-makers.
+                        </p>
+                        <div class="carousel-btn">
+                            <a class="btn btn-custom" href="{% url 'home:donate' %}">Donate Now</a>
+                            <a class="btn btn-custom btn-play" data-toggle="modal"
+                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch
+                                Video</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="{% static 'img/LGF-125.jpg' %}" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Bridging the Educational Divide</h1>
+                        <p>
+                            Our commitment to education knows no boundaries. We tirelessly strive to ensure that quality education is accessible to
+                            every child, regardless of their geographic location or socioeconomic background, as we believe that education is the
+                            key to bridging divides and fostering a brighter future
+                        </p>
+                        <div class="carousel-btn">
+                            <a  class="btn btn-custom" href="{% url 'home:volunteer' %}">Volunteer</a>
+                            <a class="btn btn-custom btn-play" data-toggle="modal"
+                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch
+                                Video</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="{% static 'img/event-2.jpg' %}" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Books, Bytes, and Bright Futures</h1>
+                        <p>
+                          At Learners Girls' Foundation, we are on a mission to promote literacy, digital skills, and gender equality. Through the
+                          power of books and technology, we aim to empower young minds, equipping them with the knowledge and skills needed to
+                          create brighter and more equitable futures
+                        </p>
+                        <div class="carousel-btn">
+                            <a class="btn btn-custom" href="{% url 'home:donate' %}">Donate Now</a>
+                            <a class="btn btn-custom btn-play" data-toggle="modal"
+                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch
+                                Video</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="{% static 'img/WhatsApp Image 2023-09-23 at 6.52.24 AM (2).jpeg' %}" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h1>Community, Education, Empowerment</h1>
+                        <p>
+                          Learners Girls' Foundation is dedicated to nurturing positive change within our communities through the transformative
+                          power of education and empowerment. Together, we are building a brighter, more inclusive world where every girl has the
+                          opportunity to thrive and succeed, regardless of the challenges they face
+                        </p>
+                        <div class="carousel-btn">
+                            <a class="btn btn-custom" href="{% url 'home:donate' %}">Donate Now</a>
+                            <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
+                                data-target="#videoModal">Watch
+                                Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+     {% endblock %}
 
 
       {% block content %}
