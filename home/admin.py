@@ -18,7 +18,7 @@ admin.site.register(Blog,BlogAdmin)
 # admin.site.register(Team)
 admin.site.register(BoardMembers)
 # admin.site.register(Projects,ProjectAdmin)
-# admin.site.register(Metrics)
+admin.site.register(Metrics)
 admin.site.register(LibraryPictures),
 # admin.site.register(OurWork)
 admin.site.register(Testimonial)
