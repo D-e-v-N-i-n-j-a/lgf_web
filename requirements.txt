@@ -19,7 +19,7 @@ click==8.0.3
 colorama==0.4.4
 cryptography==3.4.8
 Django==3.2.12
-duplicity==0.8.21
+duplicity==3.0.3.2
 exceptiongroup==1.2.2
 executing==2.0.1
 fasteners==0.14.1
